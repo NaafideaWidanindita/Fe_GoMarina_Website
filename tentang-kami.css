@@ -1,0 +1,424 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif; /* Set a default font */
+  margin: 0; /* Remove default margin */
+}
+
+/* Header */
+header {
+  background-color: #ffffff; /* Green background */
+  color: rgb(0, 0, 0); /* White text */
+  padding: 15px 20px; /* Padding */
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center items vertically */
+}
+
+.logo {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.logo-image {
+  width: 55px; /* Atur lebar logo */
+  height: 55px; /* Atur tinggi logo agar sama dengan lebar */
+  border-radius: 50%; /* Membuat logo berbentuk bulat */
+  object-fit: cover; /* Memastikan gambar terjaga proporsinya dalam lingkaran */
+  margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo h1 {
+  margin: 0; /* Hapus margin default */
+  font-size: 24px; /* Ubah ukuran font sesuai keinginan, misalnya 24px */
+}
+
+nav {
+  display: flex; /* Gunakan flexbox untuk mengatur posisi */
+  justify-content: space-between; /* Ruang antara logo dan navigasi */
+  align-items: center; /* Pusatkan item secara vertikal */
+  flex-grow: 1; /* Memungkinkan nav mengambil sisa ruang */
+}
+
+.nav-links {
+  display: flex; /* Mengatur menu navigasi menjadi flexbox */
+  justify-content: center; /* Pusatkan konten */
+  flex-grow: 1; /* Mengizinkan nav-links mengambil ruang */
+  padding-right: 3.5rem;
+}
+
+nav ul {
+  list-style-type: none; /* Hilangkan bullet */
+  padding: 0; /* Hilangkan padding */
+  margin: 0; /* Hilangkan margin */
+  display: flex; /* Flexbox untuk item menu */
+}
+
+nav ul li {
+  margin: 0 15px; /* Jarak antar item menu */
+}
+
+nav ul li a {
+  color: white; /* Teks putih */
+  text-decoration: none; /* Hilangkan garis bawah */
+  font-weight: bold; /* Teks tebal */
+}
+
+.nav-button {
+  background-color: #aab6b4; /* Warna latar belakang hijau */
+  color: rgb(0, 0, 0); /* Teks putih */
+  padding: 10px 15px; /* Padding untuk tombol */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut melengkung */
+  text-decoration: none; /* Tanpa garis bawah */
+  font-weight: bold; /* Teks tebal */
+  font-size: large;
+  transition: background-color 0.3s; /* Efek transisi */
+}
+
+.nav-button:hover {
+  background-color: #57c9b6; /* Warna lebih gelap saat hover */
+}
+
+.signin-button {
+  background-color: #000000; /* Warna latar belakang hijau */
+  color: rgb(255, 255, 255); /* Teks putih */
+  padding: 10px 15px; /* Padding untuk tombol */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut melengkung */
+  text-decoration: none; /* Tanpa garis bawah */
+  font-weight: bold; /* Teks tebal */
+  font-size: large;
+  transition: background-color 0.3s; /* Efek transisi */
+}
+
+.signin-button:hover {
+  background-color: #57c9b6; /* Warna lebih gelap saat hover */
+}
+
+/* About Us Header with Green Background */
+.about-us-header {
+  background-color: #1e564d; /* Hijau Utama */
+  color: white; /* Teks putih */
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 330px;
+}
+
+.about-us-header h2 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.slogan {
+  font-weight: bold;
+}
+
+/* Photo Gallery Style */
+.photo-gallery {
+  display: flex;
+  gap: 30px; /* Jarak antar kotak foto */
+  justify-content: center;
+  margin-bottom: 60px;
+  position: relative; /* Menyiapkan posisi relatif untuk foto */
+}
+
+.photo-box {
+  width: 260px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 8px;
+  border-color: #000000;
+  position: relative;
+  transform: translateY(-80px); /* Default geser ke atas 50px */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga proporsi gambar dalam kotak */
+}
+
+/* Adjust the first and last photo to move higher */
+.photo-gallery .photo-box:first-child,
+.photo-gallery .photo-box:last-child {
+  transform: translateY(
+    -120px
+  ); /* Geser lebih tinggi (70px) untuk foto pertama dan terakhir */
+}
+
+/* Styles for the two-column layout in the garden-info section */
+.garden-info {
+  margin: 20px 0 0 0;
+  padding: 15px 15px 0 15px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.garden-info h3 {
+  margin-top: 40px;
+  padding-left: 11.6%;
+  font-size: 35px;
+}
+
+.highlight {
+  color: #57c9b6;
+}
+
+.info-columns {
+  display: flex;
+  gap: 60px; /* Jarak antar kolom */
+  margin: 0 135px 20px 135px;
+  padding-bottom: 15px;
+}
+
+.info-columns p {
+  text-align: justify;
+  line-height: 30px;
+}
+
+.column {
+  flex: 1; /* Membuat setiap kolom memiliki lebar yang sama */
+  padding: 0 10px 0 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .info-columns {
+    flex-direction: column; /* Ubah menjadi kolom tunggal pada layar kecil */
+  }
+}
+
+.location-info {
+  margin: 20px 0;
+  padding: 5px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.location-info h3 {
+  text-align: center; /* Center the text */
+  font-size: 20px;
+}
+
+.location-info p {
+  text-align: center; /* Center the text */
+}
+
+.contact-info {
+  margin: 20px 0;
+  padding: 5px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  text-align: center; /* Center the text */
+}
+
+.contact-info p {
+  text-align: left; /* Center the text */
+  padding-left: 40.5%;
+}
+
+/* VISI MISI */
+.vision {
+  margin: 100px 0 0 0;
+  padding: 5px;
+  background-color: #ffffff; /* Light background */
+}
+
+.vision h3 {
+  font-size: 40px;
+  text-align: center; /* Center the text */
+}
+
+.underline-v {
+  display: block; /* Memastikan garis bawah muncul sebagai block element */
+  width: 90px; /* Ubah panjang garis sesuai kebutuhan */
+  height: 16px; /* Tinggi garis */
+  background-color: #57c9b6; /* Warna hijau */
+  margin: 0 auto; /* Memusatkan garis */
+  margin-top: -55px; /* Jarak antara judul dan garis */
+}
+
+.vision p {
+  text-align: center; /* Center the text */
+  padding: 20px 120px 20px 120px;
+  line-height: 30px;
+}
+
+.mission {
+  margin: 10px 0 130px 0;
+  padding: 1px;
+  background-color: #ffffff; /* Light background */
+}
+
+.mission h3 {
+  font-size: 40px;
+  text-align: center; /* Center the text */
+}
+
+.underline-m {
+  display: block; /* Memastikan garis bawah muncul sebagai block element */
+  width: 90px; /* Ubah panjang garis sesuai kebutuhan */
+  height: 16px; /* Tinggi garis */
+  background-color: #57c9b6; /* Warna hijau */
+  margin: 0 auto; /* Memusatkan garis */
+  margin-top: -55px; /* Jarak antara judul dan garis */
+}
+
+.mission p {
+  text-align: left; /* Center the text */
+  padding: 0 120px 0 120px;
+  padding-left: 33%;
+  line-height: 20px;
+}
+
+/*SLOGAN*/
+.tkslogan-container {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 100px 0;
+  background-color: #1e564d; /* Light background */
+}
+
+.tkslogan-container h2 {
+  color: #ffffff;
+}
+
+.tkslogan-container p {
+  color: #ffffff;
+}
+
+.tkslogan-left {
+  flex: 1;
+  text-align: left;
+  padding-left: 108px;
+}
+
+.tkslogan-left h2 {
+  font-size: 2.4em;
+  margin: 0;
+  padding: 0;
+}
+
+.tkslogan-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Mengatur posisi ke kanan */
+  align-items: flex-start; /* Mengatur posisi ke atas */
+  position: relative; /* Menyiapkan posisi relatif untuk anak */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang melampaui kontainer */
+}
+
+.tkslogan-photo1 {
+  width: 170px; /* Atur lebar gambar sesuai kebutuhan */
+  height: auto; /* Tinggi otomatis agar proporsional */
+  position: absolute; /* Mengubah posisi gambar menjadi absolut */
+  bottom: -140px; /* Geser gambar ke bawah */
+  left: -100px; /* Geser gambar ke kiri */
+  z-index: 0; /* Menempatkan di belakang kontainer */
+}
+
+.tkimage-left {
+  position: relative; /* Menyiapkan posisi relatif untuk gambar */
+  z-index: 1; /* Agar gambar berada di atas kontainer */
+}
+
+.tkslogan-photo2 {
+  width: 100%; /* Mengatur lebar gambar agar memenuhi kontainer */
+  height: 100%; /* Mengatur tinggi gambar agar memenuhi kontainer */
+  object-fit: cover; /* Memastikan gambar menjaga proporsi dan mengisi kontainer */
+  margin: 0; /* Menghilangkan margin */
+  padding: 0;
+  width: 700px;
+}
+
+/* MANAGEMEN TEAM */
+.management-team {
+  margin: 50px 0;
+  padding: 15px;
+  background-color: #ffffff; /* Light background */
+}
+
+.management-team h3 {
+  text-align: center; /* Center the title */
+  font-size: 30px;
+}
+
+.team-members {
+  display: flex; /* Flexbox untuk mengatur posisi */
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px; /* Margin atas untuk jarak dengan judul */
+}
+
+.team-member {
+  text-align: center; /* Pusatkan teks di dalam kotak */
+  flex: 1; /* Setiap kotak memiliki lebar yang sama */
+  max-width: 220px; /* Lebar maksimum untuk setiap kotak */
+}
+
+.team-member img {
+  width: 200px; /* Lebar penuh untuk gambar */
+  height: 300px; /* Tinggi otomatis agar proporsional */
+}
+
+.team-member h4 {
+  margin: 25px 0 10px 0; /* Jarak antara nama dan gambar */
+  font-weight: bold;
+}
+
+.team-member p {
+  color: #000000; /* Warna teks untuk tugas */
+  margin: 0 0 100px 0; /* Hilangkan margin */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Background gelap */
+  color: white; /* Teks putih */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Padding */
+}
+
+.footer-content {
+  text-align: left;
+  display: flex; /* Menggunakan Flexbox */
+  justify-content: space-around; /* Mengatur jarak antar kolom */
+  flex-wrap: wrap; /* Membungkus kolom jika diperlukan */
+  max-width: 1200px; /* Lebar maksimum footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.footer-column {
+  flex: 1; /* Setiap kolom memiliki lebar yang sama */
+  padding: 10px; /* Padding untuk kolom */
+  min-width: 200px; /* Lebar minimum kolom */
+}
+
+.footer-column h4 {
+  margin-bottom: 10px; /* Margin bawah untuk judul kolom */
+  font-size: larger;
+}
+
+.footer-column p,
+a {
+  color: #ffffff;
+}
+
+.map-container {
+  margin-top: 20px;
+  width: 100%; /* Mengatur agar peta mengikuti lebar kolom */
+  height: 150px; /* Tinggi untuk peta */
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Margin atas untuk footer bottom */
+}

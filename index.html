@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Marina</title>
+    <link rel="stylesheet" href="beranda.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo/Logo.jpg" alt="Logo" class="logo-image" />
+        <h1>Go Marina</h1>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" class="nav-button">Beranda</a></li>
+            <li>
+              <a href="tentang_kami.html" class="nav-button">Tentang Kami</a>
+            </li>
+            <li><a href="galeri.html" class="nav-button">Galeri</a></li>
+            <li><a href="produk.html" class="nav-button">Produk</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a href="sign-in.html" class="signin-button">SIGN IN</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="landing">
+        <div class="garden-beauty">
+          <img
+            src="images/beranda/keindahan-kebun/keindahan-kebun3.jpeg"
+            alt="Keindahan Kebun"
+            class="garden-image"
+          />
+          <h2>Selamat Datang di Kebun Kami!</h2>
+          <p>Batam, Indonesia</p>
+          <a href="#" class="explore-button">Jelajahi</a>
+        </div>
+
+        <div class="partners">
+          <h3>Mitra Kerjasama</h3>
+          <div class="partner-list">
+            <div class="partner">
+              <img
+                src="images/beranda/mitra-kerjasama/mitra02.jpg"
+                alt="Partner 1"
+                class="partner-image"
+              />
+              <p>Partner 1</p>
+            </div>
+            <div class="partner">
+              <img
+                src="images/beranda/mitra-kerjasama/mitra02.jpg"
+                alt="Partner 2"
+                class="partner-image"
+              />
+              <p>Partner 2</p>
+            </div>
+            <div class="partner">
+              <img
+                src="images/beranda/mitra-kerjasama/mitra02.jpg"
+                alt="Partner 3"
+                class="partner-image"
+              />
+              <p>Partner 3</p>
+            </div>
+            <div class="partner">
+              <img
+                src="images/beranda/mitra-kerjasama/mitra02.jpg"
+                alt="Partner 4"
+                class="partner-image"
+              />
+              <p>Partner 4</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="attractions">
+          <h3>Keseruan di Kebun Jambu Marina</h3>
+          <p>
+            Jelajahi berbagai keseruan di kebun kami yang pasti akan memikat
+            hati Anda!
+          </p>
+          <div class="attraction-list">
+            <div class="attraction">
+              <img
+                src="images/beranda/keseruan/petik-jambu01.webp"
+                alt="Attraction 1"
+                class="attraction-image"
+              />
+              <div class="icon">
+                <img src="images/icons/icon1.png" alt="Icon 1" />
+              </div>
+              <p>Nama Kegiatan 1</p>
+            </div>
+            <div class="attraction">
+              <img
+                src="images/beranda/keseruan/berkuda03.jpg"
+                alt="Attraction 2"
+                class="attraction-image"
+              />
+              <div class="icon">
+                <img src="images/icons/icon2.png" alt="Icon 2" />
+              </div>
+              <p>Nama Kegiatan 2</p>
+            </div>
+            <div class="attraction">
+              <img
+                src="images/beranda/keseruan/spot-foto01.jpg"
+                alt="Attraction 3"
+                class="attraction-image"
+              />
+              <div class="icon">
+                <img src="images/icons/icon3.png" alt="Icon 3" />
+              </div>
+              <p>Nama Kegiatan 3</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="events">
+          <h3>Acara Mendatang</h3>
+          <p>Jangan lewatkan acara spesial lainnya!</p>
+          <div class="event-cards">
+            <div class="event-card">
+              <div class="event-title">Acara 1</div>
+              <div class="description-container">
+                <span class="toggle-icon" onclick="toggleDescription(this);"
+                  >&#11208;</span
+                >
+                <p class="event-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                  sapiente eaque, minus, quas eligendi esse labore vel,
+                  provident explicabo repellendus ipsum corrupti! Quia alias
+                  eveniet quis excepturi dicta at minima.
+                </p>
+              </div>
+              <div class="event-date">Senin, 4 November 2025</div>
+            </div>
+
+            <div class="event-card">
+              <div class="event-title">Acara 2</div>
+              <div class="description-container">
+                <span class="toggle-icon" onclick="toggleDescription(this);"
+                  >&#11208;</span
+                >
+                <p class="event-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                  sapiente eaque, minus, quas eligendi esse labore vel,
+                  provident explicabo repellendus ipsum corrupti! Quia alias
+                  eveniet quis excepturi dicta at minima.
+                </p>
+              </div>
+              <div class="event-date">Senin, 4 November 2025</div>
+            </div>
+
+            <div class="event-card">
+              <div class="event-title">Acara 3</div>
+              <div class="description-container">
+                <span class="toggle-icon" onclick="toggleDescription(this);"
+                  >&#11208;</span
+                >
+                <p class="event-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                  sapiente eaque, minus, quas eligendi esse labore vel,
+                  provident explicabo repellendus ipsum corrupti! Quia alias
+                  eveniet quis excepturi dicta at minima.
+                </p>
+              </div>
+              <div class="event-date">Senin, 4 November 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-container">
+          <div class="visit-left">
+            <h2>Buah Jambu Segar Langsung dari Pohonnya!</h2>
+            <button class="visit-button">Beli Sekarang</button>
+          </div>
+          <div class="visit-right">
+            <img
+              src="images/beranda/beli-sekarang/beli-sekarang01.jpg"
+              alt="Foto kebun"
+              class="visit-photo"
+            />
+          </div>
+        </div>
+
+        <div class="background-circle"></div>
+        <div class="tutorial">
+          <h2>Cara Memesan</h2>
+          <p>Pelajari cara memesan produk menggunakan aplikasi mobile!</p>
+
+          <div class="steps">
+            <div class="step">
+              <img
+                src="images/beranda/cara-memesan/cara-memesan01.jpg"
+                alt="Step 1"
+                class="step-image"
+              />
+              <p style="font-weight: bold">Step 1</p>
+              <p style="text-align: justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum inventore deleniti provident, debitis dolor officiis
+                cumque repellendus dignissimos in voluptas quas vero mollitia
+                totam impedit beatae unde eum molestiae earum.
+              </p>
+            </div>
+            <div class="step">
+              <img
+                src="images/beranda/cara-memesan/cara-memesan01.jpg"
+                alt="Step 2"
+                class="step-image"
+              />
+              <p style="font-weight: bold">Step 2</p>
+              <p style="text-align: justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum inventore deleniti provident, debitis dolor officiis
+                cumque repellendus dignissimos in voluptas quas vero mollitia
+                totam impedit beatae unde eum molestiae earum.
+              </p>
+            </div>
+            <div class="step">
+              <img
+                src="images/beranda/cara-memesan/cara-memesan01.jpg"
+                alt="Step 3"
+                class="step-image"
+              />
+              <p style="font-weight: bold">Step 3</p>
+              <p style="text-align: justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum inventore deleniti provident, debitis dolor officiis
+                cumque repellendus dignissimos in voluptas quas vero mollitia
+                totam impedit beatae unde eum molestiae earum.
+              </p>
+            </div>
+            <div class="step">
+              <img
+                src="images/beranda/cara-memesan/cara-memesan01.jpg"
+                alt="Step 4"
+                class="step-image"
+              />
+              <p style="font-weight: bold">Step 4</p>
+              <p style="text-align: justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum inventore deleniti provident, debitis dolor officiis
+                cumque repellendus dignissimos in voluptas quas vero mollitia
+                totam impedit beatae unde eum molestiae earum.
+              </p>
+            </div>
+          </div>
+
+          <div class="barcode-section">
+            <img
+              src="images/beranda/cara-memesan/barcode01.png"
+              alt="Barcode"
+              class="barcode"
+            />
+            <div class="phone">
+              <img
+                src="images/beranda/cara-memesan/phone01.png"
+                alt="Handphone"
+                class="phone-image"
+              />
+              <div class="info">
+                <h3>
+                  Go Marina
+                  <i
+                    class="fas fa-copy copy-icon"
+                    onclick="copyText()"
+                    title="Copy name"
+                  ></i>
+                </h3>
+                <p>Solusi cepat membeli aneka olahan buah jambu untuk kamu!</p>
+                <div class="rating">⭐⭐⭐⭐⭐ (10)</div>
+                <button class="download-button">Unduh Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang Kami -->
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Maps Lokasi</h4>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31912.96246131836!2d103.9206228347656!3d1.0717637340358475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98c951fbd3f2d%3A0x9f90699621826af5!2sKebun%20Jambu%20Marina!5e0!3m2!1sen!2sid!4v1730730042161!5m2!1sen!2sid"
+              width="250"
+              height="150"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Kebun Jambu Marina Batam</h4>
+          <p>
+            Jl. Raya Marina City, Tj. Riau, Kec. Sekupang, Kota Batam, Kepulauan
+            Riau 29425
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Bantuan</h4>
+          <p>FAQ</p>
+          <p>Hubungi Kami</p>
+        </div>
+        <div class="footer-column">
+          <h4>Social Media</h4>
+          <p>
+            <a href="https://www.instagram.com/jambumarinabatam/">Instagram</a>
+          </p>
+          <p>
+            <a
+              href="https://www.facebook.com/p/Agrowisata-Jambu-Marina-Batam-100063649986799/?locale=id_ID"
+              >Facebook</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Go Marina. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="beranda.js"></script>
+  </body>
+</html>
