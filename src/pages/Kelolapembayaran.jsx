@@ -1,29 +1,37 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import AxiosInterceptors from "../utils/AxiosInterceptors";
 
 const Kelolapembayaran = () => {
     const navigate = useNavigate();
     const [paymentsData, setPaymentsData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    const getData = async () => {
+        setLoading(true);
+        setError(null);
+        try {
+            const result = await AxiosInterceptors.get("/payment");
+            setPaymentsData(result.data.data || []);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            setError(error.response?.data?.message || "Terjadi kesalahan saat memuat data.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     useEffect(() => {
-        axios.get("http://localhost:5000/api/v1/payment")
-            .then(result => {
-                console.log('Data API:', result.data);
-                setPaymentsData(result.data.data || []); 
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error('Error Response:', err.response || err);
-                setError(err.message || 'Unknown error');
-                setLoading(false);
-            });
+        getData();
     }, []);
 
     const handleDetailClick = (payment) => {
+        if (!payment || !payment.id) {
+            console.warn("Invalid payment data for navigation.");
+            return;
+        }
         navigate('/detailpembayaran', { state: { payment } });
     };
 
@@ -36,7 +44,7 @@ const Kelolapembayaran = () => {
         return {};
     };
 
-    if (loading) return <p>Loading data pembayaran...</p>;
+    if (loading) return <p><img src="/assets/spinner.gif" alt="Loading..." /> Memuat data pembayaran...</p>;
     if (error) return <p>Error: {error}</p>;
 
     return (
@@ -65,18 +73,18 @@ const Kelolapembayaran = () => {
                     <tbody>
                         {paymentsData.length > 0 ? (
                             paymentsData.map((payment) => (
-                            <tr key={payment.id}>
-                                <td>{payment.id}</td>
-                                <td>{payment.order_id}</td>
+                            <tr key={payment.id || "no-id"}>
+                                <td>{payment.id || "-"}</td>
+                                <td>{payment.order_id || "-"}</td>
                                 <td>
                                     {payment.image ? (
-                                    <img src={`http://localhost:5000${payment.image}`} alt="Bukti Pembayaran" width="50" />
-                                ) : (
-                                    <span>Tidak ada bukti</span>
-                                )}
+                                        <img src={`http://localhost:5000${payment.image}`} alt={`Bukti Pembayaran untuk Order ID ${payment.order_id}`} width="50" />
+                                    ) : (
+                                        <span>Tidak ada bukti</span>
+                                    )}
                                 </td>
-                                <td>{payment.option}</td>
-                                <td style={getStatusStyle(payment.status)}>{payment.status}</td>
+                                <td>{payment.option || "Tidak tersedia"}</td>
+                                <td style={getStatusStyle(payment.status)}>{payment.status || "Tidak diketahui"}</td>
                                 <td>
                                     <button onClick={() => handleDetailClick(payment)}>Detail</button>
                                 </td>
@@ -87,7 +95,7 @@ const Kelolapembayaran = () => {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="7">Tidak ada data pembayaran</td>
+                                <td colSpan="7">Belum ada data pembayaran yang tersedia.</td>
                             </tr>
                         )}
                     </tbody>
