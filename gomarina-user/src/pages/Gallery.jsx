@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import Header from "../components/Headeri/Header";
+import Footer from "../components/Footeri/Footer";
 import GalleryButtonGroup from "../components/Galeri/GalleryButtonGroup";
 import ImageGallery from "../components/Galeri/ImageGallery";
+
 
 const photos = {
   utama: [
@@ -139,11 +142,12 @@ const Gallery = () => {
 
   return (
     <main>
+      <Header />
       <section className="galeri-header">
         <h2>Galeri Kami</h2>
         <p>
           Tak Kenal maka tak sayang, lebih dekat dengan
-          <span className="highlight1"> Kebun Jambu Marina</span>
+          <span className="highlight"> Kebun Jambu Marina</span>
         </p>
         <p className="slogan">
           "Jelajahi keindahan kebun dan berbagai momen menarik yang terabadikan
@@ -158,6 +162,7 @@ const Gallery = () => {
       <section className="photo-gallery" id="photo-gallery">
         <ImageGallery category={selectedCategory} photos={photos} />
       </section>
+      <Footer />
     </main>
   );
 };

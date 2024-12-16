@@ -13,7 +13,7 @@ const Testimonial = () => {
               alt="User 1"
               className="user-photo"
             />
-            <p className="user-name">Rahma</p>
+            <p className="user-name">Rahma Ajjahe</p>
           </div>
         </div>
         <div className="testimonial-item">
@@ -26,7 +26,7 @@ const Testimonial = () => {
               alt="User 2"
               className="user-photo"
             />
-            <p className="user-name">Abe</p>
+            <p className="user-name">Rihmi Baswedan</p>
           </div>
         </div>
         <div className="testimonial-item">
@@ -37,7 +37,7 @@ const Testimonial = () => {
               alt="User 3"
               className="user-photo"
             />
-            <p className="user-name">Cipung</p>
+            <p className="user-name">Rohmo Amin</p>
           </div>
         </div>
       </div>

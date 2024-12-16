@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../components/Headeri/Header";
+import Footer from "../components/Footeri/Footer";
 import AboutUsHeader from "../components/TentangKami/AboutUsHeader";
 import PhotoGallery from "../components/TentangKami/PhotoGallery";
 import GardenInfo from "../components/TentangKami/GardenInfo";
@@ -7,6 +9,7 @@ import ContactInfo from "../components/TentangKami/ContactInfo";
 import VisionMission from "../components/TentangKami/VisionMission";
 import TKSlogan from "../components/TentangKami/TKSlogan";
 import ManagementTeam from "../components/TentangKami/ManagementTeam";
+
 
 function copyToClipboard(text) {
   navigator.clipboard
@@ -18,6 +21,7 @@ function copyToClipboard(text) {
 const About = () => {
   return (
     <main>
+      <Header />
       <section className="about-us">
         <AboutUsHeader />
         <PhotoGallery />
@@ -28,6 +32,7 @@ const About = () => {
         <TKSlogan />
         <ManagementTeam />
       </section>
+      <Footer />
     </main>
   );
 };
