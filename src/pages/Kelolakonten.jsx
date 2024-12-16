@@ -95,25 +95,25 @@ const Kelolakonten = () => {
                         className={`btn-tab ${activeTab === "Galeri" ? "active" : "inactive"}`} 
                         onClick={() => clickTab("Galeri")}
                     >
-                        Galeri
+                    Galeri
                     </button>
                     <button 
                         className={`btn-tab ${activeTab === "Agenda" ? "active" : "inactive"}`} 
                         onClick={() => clickTab("Agenda")}
                     >
-                        Agenda
+                    Agenda
                     </button>
                     <button 
                         className={`btn-tab ${activeTab === "Mitra" ? "active" : "inactive"}`} 
                         onClick={() => clickTab("Mitra")}
                     >
-                        Mitra
+                    Mitra
                     </button>
                     <button 
                         className={`btn-tab ${activeTab === "Konten" ? "active" : "inactive"}`} 
                         onClick={() => clickTab("Konten")}
                     >
-                        Konten
+                    Konten
                     </button>
                 </div>
 
