@@ -1470,6 +1470,10 @@ tbody tr td:last-child, thead tr th:last-child {
     letter-spacing: 0.4px;
     cursor: pointer;
     border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
 }
 
 /* Upload Content */

@@ -1,0 +1,450 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Set a default font */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffff; /* Green background */
+    color: rgb(0, 0, 0); /* White text */
+    padding: 15px 20px; /* Padding */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .logo-image {
+    width: 55px; /* Atur lebar logo */
+    height: 55px; /* Atur tinggi logo agar sama dengan lebar */
+    border-radius: 50%; /* Membuat logo berbentuk bulat */
+    object-fit: cover; /* Memastikan gambar terjaga proporsinya dalam lingkaran */
+    margin-right: 10px; /* Jarak antara logo dan teks */
+  }
+  
+  .logo h1 {
+    margin: 0; /* Hapus margin default */
+    font-size: 24px; /* Ubah ukuran font sesuai keinginan, misalnya 24px */
+  }
+  
+  nav {
+    display: flex; /* Gunakan flexbox untuk mengatur posisi */
+    justify-content: space-between; /* Ruang antara logo dan navigasi */
+    align-items: center; /* Pusatkan item secara vertikal */
+    flex-grow: 1; /* Memungkinkan nav mengambil sisa ruang */
+  }
+  
+  .nav-links {
+    display: flex; /* Mengatur menu navigasi menjadi flexbox */
+    justify-content: center; /* Pusatkan konten */
+    flex-grow: 1; /* Mengizinkan nav-links mengambil ruang */
+    padding-right: 3.5rem;
+  }
+  
+  nav ul {
+    list-style-type: none; /* Hilangkan bullet */
+    padding: 0; /* Hilangkan padding */
+    margin: 0; /* Hilangkan margin */
+    display: flex; /* Flexbox untuk item menu */
+  }
+  
+  nav ul li {
+    margin: 0 15px; /* Jarak antar item menu */
+  }
+  
+  nav ul li a {
+    color: white; /* Teks putih */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-weight: bold; /* Teks tebal */
+  }
+  
+  .nav-button {
+    background-color: #aab6b4; /* Warna latar belakang hijau */
+    color: rgb(0, 0, 0); /* Teks putih */
+    padding: 10px 15px; /* Padding untuk tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    text-decoration: none; /* Tanpa garis bawah */
+    font-weight: bold; /* Teks tebal */
+    font-size: large;
+    transition: background-color 0.3s; /* Efek transisi */
+  }
+  
+  .nav-button:hover {
+    background-color: #57c9b6; /* Warna lebih gelap saat hover */
+  }
+  
+  .signin-button {
+    background-color: #000000; /* Warna latar belakang hijau */
+    color: rgb(255, 255, 255); /* Teks putih */
+    padding: 10px 15px; /* Padding untuk tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    text-decoration: none; /* Tanpa garis bawah */
+    font-weight: bold; /* Teks tebal */
+    font-size: large;
+    transition: background-color 0.3s; /* Efek transisi */
+  }
+  
+  .signin-button:hover {
+    background-color: #57c9b6; /* Warna lebih gelap saat hover */
+  }
+  
+  /* About Us Header with Green Background */
+  .product-us-header {
+    background-color: #1e564d; /* Hijau Utama */
+    color: white; /* Teks putih */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 330px;
+  }
+  
+  .product-us-header h2 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .slogan {
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #57c9b6;
+  }
+  
+  /* Photo Gallery Style */
+  .photo-gallery {
+    display: flex;
+    gap: 30px; /* Jarak antar kotak foto */
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative; /* Menyiapkan posisi relatif untuk foto */
+  }
+  
+  .photo-box {
+    width: 260px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 8px;
+    border-color: #000000;
+    background-color: #ffffff;
+    position: relative;
+    transform: translateY(-80px); /* Default geser ke atas 50px */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+  }
+  
+  .photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga proporsi gambar dalam kotak */
+  }
+  
+  /* Adjust the first and last photo to move higher */
+  .photo-gallery .photo-box:first-child,
+  .photo-gallery .photo-box:last-child {
+    transform: translateY(
+      -120px
+    ); /* Geser lebih tinggi (70px) untuk foto pertama dan terakhir */
+  }
+  
+  /* Styles for the two-column layout in the garden-info section */
+  .spanduk {
+    margin: 130px 0 40px 0;
+    padding: 15px 15px 15px 15px;
+    background-color: #1e564d; /* Light background */
+  }
+  
+  .spanduk h3 {
+    color: #ffffff;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  .highlight {
+    color: #57c9b6;
+  }
+  
+  /*UNGGULAN*/
+  .unggulan-container {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    padding: 15px;
+    background-color: #57c9b6; /* Light background */
+  }
+  
+  .unggulan-left {
+    flex: 1;
+    text-align: left;
+    padding-left: 108px;
+  }
+  
+  .unggulan-left h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+    transform: translateY(-25px);
+    background-color: #f9a21b;
+    color: black;
+    width: 230px;
+    height: 40px;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .unggulan-left h2 {
+    font-size: 2.2em;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  .unggulan-left p {
+    padding: 0;
+    font-size: 1.5em;
+  }
+  
+  .unggulan-button {
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #000000; /* Ganti warna sesuai keinginan */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  .unggulan-button:hover {
+    background-color: #1e564d; /* Ganti warna untuk hover */
+  }
+  
+  .unggulan-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .unggulan-photo {
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 112px;
+    margin-left: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Bayangan yang lebih gelap */
+  }
+  
+  .more-product {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+  }
+  
+  .more-product h3 {
+    font-size: 30px;
+    color: #1e564d;
+    margin-bottom: 35px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
+    max-width: 800px; /* Lebar maksimum grid */
+    margin: 0 auto;
+  }
+  
+  .product-box {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 100%;
+    max-width: 300px; /* Perbesar ukuran maksimum */
+    position: relative;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 250px; /* Perbesar tinggi gambar */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Icon Love */
+  .product-box .icon-love {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #e91e63; /* Warna merah untuk love icon */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .product-box .icon-love:hover {
+    color: #f50057; /* Efek saat hover */
+  }
+  
+  .product-box h4 {
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+    color: #333;
+  }
+  
+  .product-price {
+    color: #57c9b6;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .product-description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .beli-button {
+    padding: 15px 25px; /* Perbesar padding tombol */
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #1e564d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .beli-button:hover {
+    background-color: #57c9b6;
+  }
+  
+  /* Testimoni */
+  .testimoni {
+    text-align: center;
+    margin: 120px 0;
+  }
+  
+  .testimoni h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1e564d; /* Hijau utama */
+    margin-bottom: 30px;
+  }
+  
+  /* Testimonial Box (Untuk tiga kotak) */
+  .testimonial-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Jarak antar kotak */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Setiap Kotak Testimoni */
+  .testimonial-item {
+    background-color: #57c9b6;
+    border-radius: 15px;
+    padding: 20px;
+    width: 30%; /* Ukuran kotak */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Komentar */
+  .comment {
+    font-size: 16px;
+    font-style: italic;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  
+  /* User Info (Foto dan Nama) */
+  .user-info {
+    display: flex;
+    flex-direction: column; /* Mengubah arah menjadi kolom */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    justify-content: center;
+    gap: 10px; /* Jarak antara foto dan nama */
+  }
+  
+  /* Foto User (Bulat) */
+  .user-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Membuat foto bulat */
+    object-fit: cover;
+    border: 2px solid #57c9b6; /* Border hijau di sekitar foto */
+  }
+  
+  /* Nama User */
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e564d; /* Hijau utama */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333; /* Background gelap */
+    color: white; /* Teks putih */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Padding */
+  }
+  
+  .footer-content {
+    text-align: left;
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: space-around; /* Mengatur jarak antar kolom */
+    flex-wrap: wrap; /* Membungkus kolom jika diperlukan */
+    max-width: 1200px; /* Lebar maksimum footer */
+    margin: 0 auto; /* Memusatkan footer */
+  }
+  
+  .footer-column {
+    flex: 1; /* Setiap kolom memiliki lebar yang sama */
+    padding: 10px; /* Padding untuk kolom */
+    min-width: 200px; /* Lebar minimum kolom */
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 10px; /* Margin bawah untuk judul kolom */
+    font-size: larger;
+  }
+  
+  .footer-column p,
+  a {
+    color: #ffffff;
+  }
+  
+  .map-container {
+    margin-top: 20px;
+    width: 100%; /* Mengatur agar peta mengikuti lebar kolom */
+    height: 150px; /* Tinggi untuk peta */
+  }
+  
+  .footer-bottom {
+    margin-top: 20px; /* Margin atas untuk footer bottom */
+  }
+  
