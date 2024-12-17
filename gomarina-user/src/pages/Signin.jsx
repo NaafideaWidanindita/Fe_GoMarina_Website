@@ -1,23 +1,49 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/sign-in.css"; // Assuming CSS is in the same directory
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "../styles/sign-in.css"; // Assuming CSS is in the styles folder
 
 function SignIn() {
-  // State for password visibility toggle
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate(); // To redirect user after successful login
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    setErrorMessage(""); // Clear previous error messages
+
     const login = e.target.login.value;
     const password = e.target.password.value;
-    console.log("Username/Email/Phone: ", login);
-    console.log("Password: ", password);
-    // Add your API call here or handle state updates
+
+    try {
+      // Send login data to the backend
+      const response = await axios.post("http://localhost:5000/api/auth/login", {
+        username: login, // Adjust 'username' field based on API requirements
+        password: password,
+      });
+
+      const { accessToken, role } = response.data;
+
+      // Store token in localStorage
+      localStorage.setItem("accessToken", accessToken);
+
+      // Redirect based on role
+      if (role === "admin") {
+        navigate("/admin/dashboard"); // Redirect to admin dashboard
+      } else {
+        setErrorMessage("Anda tidak memiliki akses sebagai admin.");
+      }
+    } catch (error) {
+      // Handle error responses
+      console.error("Login Error: ", error.response);
+      setErrorMessage(
+        error.response?.data?.message || "Login gagal. Periksa kembali kredensial Anda."
+      );
+    }
   };
 
   return (
@@ -46,6 +72,13 @@ function SignIn() {
           <p style={{ marginLeft: "5px" }}>
             Belum punya akun? <Link to="/signup">Sign Up</Link>
           </p>
+
+          {errorMessage && (
+            <div className="error-message" style={{ color: "red", marginBottom: "10px" }}>
+              {errorMessage}
+            </div>
+          )}
+
           <form onSubmit={handleSubmit}>
             <label>Username/Email/Telepon</label>
             <input
@@ -60,14 +93,11 @@ function SignIn() {
               <input
                 type={passwordVisible ? "text" : "password"}
                 name="password"
-                id="password-input"
                 required
                 placeholder="Masukkan password"
               />
               <i
-                className={`fas fa-eye${
-                  passwordVisible ? "" : "-slash"
-                } icon-eye`}
+                className={`fas fa-eye${passwordVisible ? "" : "-slash"} icon-eye`}
                 onClick={togglePasswordVisibility}
               ></i>
             </div>
