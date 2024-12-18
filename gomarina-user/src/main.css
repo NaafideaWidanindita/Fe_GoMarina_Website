@@ -1,9 +1,3 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif; /* Set a default font */
-  margin: 0; /* Remove default margin */
-}
-
 /* Header */
 header {
   background-color: #ffffff; /* Green background */
@@ -27,9 +21,10 @@ header {
   margin-right: 10px; /* Jarak antara logo dan teks */
 }
 
-.logo h1 {
+.logo-h1 {
   margin: 0; /* Hapus margin default */
   font-size: 24px; /* Ubah ukuran font sesuai keinginan, misalnya 24px */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav {
@@ -64,14 +59,16 @@ nav ul li a {
 }
 
 .nav-button {
-    color: rgb(0, 0, 0); /* Teks putih */
+  color: rgb(0, 0, 0); /* Teks putih */
   padding: 10px 15px; /* Padding untuk tombol */
   border: none; /* Tanpa border */
   border-radius: 5px; /* Sudut melengkung */
   text-decoration: none; /* Tanpa garis bawah */
   font-weight: bold; /* Teks tebal */
   font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   transition: background-color 0.3s; /* Efek transisi */
+  font-weight: bold;
 }
 
 .nav-button:hover {
@@ -92,6 +89,12 @@ nav ul li a {
 
 .signin-button:hover {
   background-color: #597545; /* Warna lebih gelap saat hover */
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif; /* Set a default font */
+  margin: 0; /* Remove default margin */
 }
 
 /* Main Content */
@@ -129,6 +132,7 @@ nav ul li a {
   color: white;
   left: 50%; /* Pindahkan ke tengah secara horizontal */
   transform: translateX(-50%); /* Menggeser kembali setengah lebar elemen */
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .garden-beauty p {
@@ -136,12 +140,13 @@ nav ul li a {
   font-size: 1.1em; /* Ukuran font untuk paragraf */
   margin: 0; /* Menghilangkan margin */
   color: white;
-  left: 28.5%; /* Pindahkan ke tengah secara horizontal */
+  left: 27.8%; /* Pindahkan ke tengah secara horizontal */
+  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .explore-button {
   position: absolute; /* Memposisikan tombol di atas gambar */
-  bottom: 120px; /* Turunkan dari atas untuk tombol */
+  bottom: 150px; /* Turunkan dari atas untuk tombol */
   left: 50%; /* Jarak dari kiri */
   background-color: #E7F0DD; /* Latar belakang hijau */
   color: black; /* Teks putih */
@@ -223,6 +228,7 @@ nav ul li a {
   padding-left: 110px; /* Sesuaikan nilai ini untuk menggeser teks lebih jauh ke kanan */
   margin-top: 0; /* Space below the heading */
   margin-bottom: 35px;
+  font-size: 15px;
 }
 
 .attraction-list {
@@ -296,6 +302,7 @@ nav ul li a {
   padding-left: 126px; /* Sesuaikan nilai ini untuk menggeser teks lebih jauh ke kanan */
   margin-top: 0; /* Space below the heading */
   margin-bottom: 35px;
+  font-size: 15px;
 }
 
 .event-cards {
@@ -400,6 +407,26 @@ nav ul li a {
   display: block; /* Tampilkan deskripsi penuh saat diperluas */
   max-height: none; /* Hapus batas tinggi maksimum */
 }
+
+.event-description {
+  margin-bottom: 20px; /* Memberikan jarak yang lebih besar di bawah deskripsi */
+}
+
+.event-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Menampilkan 3 gambar per baris */
+  gap: 15px; /* Memberikan jarak antar gambar */
+  margin-top: 20px; /* Jarak antara deskripsi dan gambar */
+}
+
+.event-images img {
+  width: 100%; /* Membuat gambar responsif sesuai kolom */
+  height: 150px; /* Menentukan tinggi gambar */
+  object-fit: cover; /* Menjaga gambar tetap proporsional */
+  border-radius: 8px; /* Memberikan sedikit radius agar gambar lebih estetis */
+}
+
+
 
 /*VISIT*/
 .visit-container {
@@ -512,6 +539,7 @@ nav ul li a {
   padding: 0 0 0 0;
   z-index: 1;
   text-align: center;
+  font-size: 15px;
 }
 
 .steps {
@@ -537,7 +565,8 @@ nav ul li a {
 .step p {
   padding: 10px 0 0 40px;
   margin: 0 0 0 0;
-  max-width: 73%;
+  max-width: 88%;
+  color: black;
 }
 
 .barcode-section {
@@ -560,6 +589,7 @@ nav ul li a {
   align-items: center;
   gap: 0; /* Mengatur jarak antara elemen di dalam .phone */
   z-index: 1;
+  margin-top: 100px;
 }
 
 .phone-image {
@@ -584,6 +614,7 @@ nav ul li a {
   margin: 0 0 0 0;
   z-index: 1;
   color: #ffffff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .copy-icon {
@@ -592,6 +623,10 @@ nav ul li a {
   color: #ffffff; /* Mengatur warna ikon */
   z-index: 1;
   font-size: 20px;
+}
+
+.des-rating {
+color: white;
 }
 
 .rating {
@@ -612,7 +647,7 @@ nav ul li a {
 }
 
 .download-button:hover {
-  background-color: #1e564d;
+  background-color: #597545; /* Ganti warna untuk hover */
   z-index: 1;
 }
 
@@ -632,10 +667,13 @@ nav ul li a {
   margin-bottom: 0;
   font-size: 40px;
   font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-us-header p {
   font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white; /* Teks putih */
 }
 
 .slogan {
@@ -689,7 +727,7 @@ nav ul li a {
   font-size: 35px;
 }
 
-.highlight {
+.highlight4 {
   color: #597545;
 }
 
@@ -703,6 +741,9 @@ nav ul li a {
 .info-columns p {
   text-align: justify;
   line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 14px;
 }
 
 .column {
@@ -719,7 +760,7 @@ nav ul li a {
 
 .location-info {
   margin: 20px 0;
-  padding: 5px;
+  padding: 15px;
   background-color: #f9f9f9; /* Light background */
 }
 
@@ -730,11 +771,13 @@ nav ul li a {
 
 .location-info p {
   text-align: center; /* Center the text */
+  padding-top: 5px;
+  font-size: 14px;
 }
 
 .contact-info {
   margin: 20px 0;
-  padding: 5px;
+  padding: 15px;
   background-color: #f9f9f9; /* Light background */
 }
 
@@ -744,8 +787,9 @@ nav ul li a {
 }
 
 .contact-info p {
-  text-align: left; /* Center the text */
-  padding-left: 40.5%;
+  text-align: center; /* Center the text */
+  padding-top: 5px;
+  font-size: 14px;
 }
 
 /* VISI MISI */
@@ -766,13 +810,14 @@ nav ul li a {
   height: 16px; /* Tinggi garis */
   background-color: #597545; /* Warna hijau */
   margin: 0 auto; /* Memusatkan garis */
-  margin-top: -55px; /* Jarak antara judul dan garis */
+  margin-top: -15px; /* Jarak antara judul dan garis */
 }
 
 .vision p {
   text-align: center; /* Center the text */
   padding: 20px 120px 20px 120px;
   line-height: 30px;
+  font-size: 15px;
 }
 
 .mission {
@@ -792,14 +837,15 @@ nav ul li a {
   height: 16px; /* Tinggi garis */
   background-color: #597545; /* Warna hijau */
   margin: 0 auto; /* Memusatkan garis */
-  margin-top: -55px; /* Jarak antara judul dan garis */
+  margin-top: -15px; /* Jarak antara judul dan garis */
 }
 
 .mission p {
   text-align: left; /* Center the text */
   padding: 0 120px 0 120px;
-  padding-left: 33%;
+  padding-left: 34%;
   line-height: 20px;
+  font-size: 15px;
 }
 
 /*SLOGAN*/
@@ -831,6 +877,13 @@ nav ul li a {
   font-size: 2.4em;
   margin: 0;
   padding: 0;
+}
+
+.tkslogan-left p {
+  font-size: 1em;
+  margin-top: 5px;
+  padding: 0;
+  text-align: left;
 }
 
 .tkslogan-right {
@@ -903,11 +956,13 @@ nav ul li a {
 .team-member p {
   color: #000000; /* Warna teks untuk tugas */
   margin: 0 0 100px 0; /* Hilangkan margin */
+  font-size: 15px;
 }
 
 .highlight1 {
-  color: #ffffff;
+  color: #b5f97d;
 }
+
 
 /* Galeri Header */
 .galeri-header {
@@ -925,10 +980,17 @@ nav ul li a {
   margin-bottom: 0;
   font-size: 40px;
   font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .galeri-header p {
   font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white; /* Teks putih */
+}
+
+.highlight2 {
+  color: #b5f97d;
 }
 
 .slogan {
@@ -1195,6 +1257,7 @@ nav ul li a {
   padding: 20px;
   margin-bottom: 20px;
   height: 330px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .product-us-header h2 {
@@ -1207,6 +1270,12 @@ nav ul li a {
 
 .product-us-header p {
   font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white; /* Teks putih */
+}
+
+.highlight3 {
+  color: #b5f97d;
 }
 
 .slogan {
@@ -1252,13 +1321,12 @@ nav ul li a {
 /* Styles for the two-column layout in the garden-info section */
 .spanduk {
   margin: 130px 0 40px 0;
-  padding: 15px 15px 15px 15px;
+  padding: 20px;
   background-color: #597545; /* Light background */
 }
 
 .spanduk h3 {
   color: #ffffff;
-  margin-top: 40px;
   text-align: center;
   font-size: 35px;
 }
@@ -1300,8 +1368,10 @@ nav ul li a {
   font-weight: bold;
 }
 .unggulan-left p {
-  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 30px;
   font-size: 1.5em;
+  text-align: left;
 }
 
 .unggulan-button {
@@ -1405,12 +1475,14 @@ nav ul li a {
   font-weight: bold;
   font-size: 1.2em;
   margin: 10px 0;
+  text-align: left;
 }
 
 .product-description {
   font-size: 1em;
   color: #666;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .beli-button {
@@ -1525,6 +1597,7 @@ footer {
 .footer-column p,
 a {
   color: #ffffff;
+  text-align: left
 }
 
 .map-container {
@@ -1533,6 +1606,191 @@ a {
   height: 150px; /* Tinggi untuk peta */
 }
 
-.footer-bottom {
+.footer-bottom p {
   margin-top: 20px; /* Margin atas untuk footer bottom */
+}
+
+.footer-bottom-p {
+  color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: auto; /* Allow scrolling */
+}
+
+.sign-in {
+  background-color: #e7f0dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+}
+
+.content-wrapper-signin {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  max-width: 1400px;
+  height: 90vh;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.welcome-section-signin {
+  background-color: #e7f0dd;
+  color: #000000;
+  padding: 20px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-section-signin h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.welcome-section-signin p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-section-signin {
+  background-color: #ffffff;
+  padding: 20px 20px 20px 5px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.form-section-signin h2 {
+  color: #01241e;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-left: -15px;
+}
+
+.form-section-signin form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-section-signin form label {
+  font-size: 0.9rem;
+  color: #01241e;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  margin-top: 5px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #e7f0dd;
+}
+
+textarea {
+  resize: none;
+  height: 50px;
+}
+
+.password-field-signin {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-field-signin input[type="password"] {
+  flex: 1;
+  padding: 8px;
+}
+
+.icon-eye {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #597545;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #01241e;
+}
+
+.welcome-section-signin h1 {
+  margin-right: 60px;
+  text-align: center;
+}
+
+.description-signin {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: center;
+  margin-right: 50px;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #000000;
+}
+
+p a {
+  color: rgb(12, 100, 232); /* Corrected color value */
+  text-decoration: underline;
+}
+
+.logo-wrapper-signin {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 110px;
+}
+
+.logo-utama {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 160px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }

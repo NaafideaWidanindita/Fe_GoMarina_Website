@@ -1,0 +1,90 @@
+
+/* Header */
+header {
+    background-color: #ffffff; /* Green background */
+    color: rgb(0, 0, 0); /* White text */
+    padding: 15px 20px; /* Padding */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .logo-image {
+    width: 55px; /* Atur lebar logo */
+    height: 55px; /* Atur tinggi logo agar sama dengan lebar */
+    border-radius: 50%; /* Membuat logo berbentuk bulat */
+    object-fit: cover; /* Memastikan gambar terjaga proporsinya dalam lingkaran */
+    margin-right: 10px; /* Jarak antara logo dan teks */
+  }
+  
+  .logo h1 {
+    margin: 0; /* Hapus margin default */
+    font-size: 24px; /* Ubah ukuran font sesuai keinginan, misalnya 24px */
+  }
+  
+  nav {
+    display: flex; /* Gunakan flexbox untuk mengatur posisi */
+    justify-content: space-between; /* Ruang antara logo dan navigasi */
+    align-items: center; /* Pusatkan item secara vertikal */
+    flex-grow: 1; /* Memungkinkan nav mengambil sisa ruang */
+  }
+  
+  .nav-links {
+    display: flex; /* Mengatur menu navigasi menjadi flexbox */
+    justify-content: center; /* Pusatkan konten */
+    flex-grow: 1; /* Mengizinkan nav-links mengambil ruang */
+    padding-right: 3.5rem;
+  }
+  
+  nav ul {
+    list-style-type: none; /* Hilangkan bullet */
+    padding: 0; /* Hilangkan padding */
+    margin: 0; /* Hilangkan margin */
+    display: flex; /* Flexbox untuk item menu */
+  }
+  
+  nav ul li {
+    margin: 0 15px; /* Jarak antar item menu */
+  }
+  
+  nav ul li a {
+    color: white; /* Teks putih */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-weight: bold; /* Teks tebal */
+  }
+  
+  .nav-button {
+      color: rgb(0, 0, 0); /* Teks putih */
+    padding: 10px 15px; /* Padding untuk tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    text-decoration: none; /* Tanpa garis bawah */
+    font-weight: bold; /* Teks tebal */
+    font-size: large;
+    transition: background-color 0.3s; /* Efek transisi */
+  }
+  
+  .nav-button:hover {
+    background-color: #E7F0DD; /* Warna lebih gelap saat hover */
+  }
+  
+  .signin-button {
+    background-color: #000000; /* Warna latar belakang hijau */
+    color: rgb(255, 255, 255); /* Teks putih */
+    padding: 10px 15px; /* Padding untuk tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    text-decoration: none; /* Tanpa garis bawah */
+    font-weight: bold; /* Teks tebal */
+    font-size: large;
+    transition: background-color 0.3s; /* Efek transisi */
+  }
+  
+  .signin-button:hover {
+    background-color: #597545; /* Warna lebih gelap saat hover */
+  }

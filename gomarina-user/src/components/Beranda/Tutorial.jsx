@@ -18,7 +18,7 @@ const Tutorial = () => {
       <div className="background-circle" />
       <div className="tutorial">
         <h2>Cara Memesan</h2>
-        <p>Pelajari cara memesan produk menggunakan aplikasi mobile!</p>
+        {/* <p>Pelajari cara memesan produk menggunakan aplikasi mobile!</p> */}
         <div className="steps">
           <div className="step">
             <img
@@ -89,7 +89,7 @@ const Tutorial = () => {
                   title="Copy name"
                 />
               </h3>
-              <p style={{ textAlign: "left" }}>
+              <p className="des-rating" style={{ textAlign: "left" }}>
                 Solusi cepat membeli aneka olahan buah jambu untuk kamu!
               </p>
               <div className="rating">⭐⭐⭐⭐⭐ (10)</div>

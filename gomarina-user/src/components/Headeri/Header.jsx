@@ -10,7 +10,7 @@ const Header = () => (
         alt="Logo"
         className="logo-image"
       />
-      <h1>Go Marina</h1>
+      <h1 className="logo-h1">Go Marina</h1>
     </div>
     <nav>
       <div className="nav-links">

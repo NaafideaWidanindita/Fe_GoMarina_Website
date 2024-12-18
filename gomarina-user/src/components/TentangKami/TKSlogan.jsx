@@ -7,7 +7,7 @@ function TKSlogan() {
         <h2>"</h2>
         <h2>Petik Kebaikan dari Kebun, Bawa Pulang Cerita dari Alam</h2>
         <p>-by Kak Gem</p>
-        <h2 style={{ paddingLeft: "85%" }}>"</h2>
+        <h2 style={{ paddingLeft: "93%" }}>"</h2>
         <div className="tkimage-left">
           <img
             src="src/assets/images/tentang-kami/slogan-tk/guavabg.png"

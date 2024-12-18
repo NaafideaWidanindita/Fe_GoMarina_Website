@@ -5,7 +5,7 @@ function GardenInfo() {
     <div className="garden-info">
       <h3>
         Temukan Pesona Alami di{" "}
-        <span className="highlight">Kebun Jambu Marina</span>
+        <span className="highlight4">Kebun Jambu Marina</span>
       </h3>
       <div className="info-columns">
         <div className="column left-column">

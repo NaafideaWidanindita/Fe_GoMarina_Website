@@ -20,7 +20,7 @@ html {
   font-family: "Poppins", Helvetica;
 }
 
-.content-wrapper {
+.content-wrapper-signin {
   display: flex;
   flex-direction: row;
   width: 90vw;
@@ -31,7 +31,7 @@ html {
   overflow: hidden;
 }
 
-.welcome-section {
+.welcome-section-signin {
   background-color: #e7f0dd;
   color: #000000;
   padding: 20px;
@@ -42,17 +42,17 @@ html {
   text-align: center;
 }
 
-.welcome-section h1 {
+.welcome-section-signin h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
-.welcome-section p {
+.welcome-section-signin p {
   font-size: 1rem;
   line-height: 1.6;
 }
 
-.form-section {
+.form-section-signin {
   background-color: #ffffff;
   padding: 20px 20px 20px 5px;
   width: 60%;
@@ -62,21 +62,21 @@ html {
   overflow-y: auto;
 }
 
-.form-section h2 {
+.form-section-signin h2 {
   color: #01241e;
   font-size: 2rem;
   margin-bottom: 10px;
   margin-left: -15px;
 }
 
-form {
+.form-section-signin form {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 400px;
 }
 
-label {
+.form-section-signin form label {
   font-size: 0.9rem;
   color: #01241e;
   margin-top: 10px;
@@ -102,14 +102,14 @@ textarea {
   height: 50px;
 }
 
-.password-field {
+.password-field-signin {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.password-field input[type="password"] {
+.password-field-signin input[type="password"] {
   flex: 1;
   padding: 8px;
 }
@@ -136,14 +136,16 @@ button[type="submit"]:hover {
   background-color: #01241e;
 }
 
-h1 {
+.welcome-section-signin h1 {
   margin-right: 60px;
+  text-align: center;
 }
 
-.description {
+.description-signin {
   font-size: 0.8rem;
   margin-top: 10px;
   text-align: center;
+  margin-right: 50px;
 }
 
 p {
@@ -158,16 +160,17 @@ p a {
   text-decoration: underline;
 }
 
-.logo-wrapper {
+.logo-wrapper-signin {
   text-align: center;
   margin-bottom: 20px;
-  margin-right: 60px;
+  margin-left: 110px;
 }
 
-.logo {
+.logo-utama {
   max-width: 150px;
   height: auto;
   border-radius: 50%;
+  margin-right: 160px;
 }
 
 .error-message {

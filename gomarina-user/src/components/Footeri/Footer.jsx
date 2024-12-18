@@ -3,6 +3,7 @@ import React from 'react';
 const Footer = () => (
   <footer>
     <div className="footer-content">
+      {/* Kolom Maps Lokasi */}
       <div className="footer-column">
         <h4>Maps Lokasi</h4>
         <div className="map-container">
@@ -14,40 +15,58 @@ const Footer = () => (
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Kebun Jambu Marina Location"
           ></iframe>
         </div>
       </div>
 
+      {/* Kolom Alamat */}
       <div className="footer-column">
         <h4>Kebun Jambu Marina Batam</h4>
-        <p>
+        <p className="footer-info">
           Jl. Raya Marina City, Tj. Riau, Kec. Sekupang, Kota Batam, Kepulauan
           Riau 29425
         </p>
       </div>
 
+      {/* Kolom Bantuan */}
       <div className="footer-column">
         <h4>Bantuan</h4>
-        <p>FAQ</p>
-        <p>Hubungi Kami</p>
+        <p className="footer-bantuan">
+          <a href="#faq">FAQ</a>
+        </p>
+        <p className="footer-bantuan">
+          <a href="#contact">Hubungi Kami</a>
+        </p>
       </div>
 
+      {/* Kolom Sosial Media */}
       <div className="footer-column">
         <h4>Social Media</h4>
-        <p>
-          <a href="https://www.instagram.com/jambumarinabatam/">Instagram</a>
+        <p className="footer-sosmed">
+          <a
+            href="https://www.instagram.com/jambumarinabatam/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </p>
-        <p>
+        <p className="footer-sosmed">
           <a
             href="https://www.facebook.com/p/Agrowisata-Jambu-Marina-Batam-100063649986799/?locale=id_ID"
-            >Facebook</a
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            Facebook
+          </a>
         </p>
       </div>
     </div>
 
+    {/* Footer Bottom */}
     <div className="footer-bottom">
-      <p>&copy; 2024 Go Marina. All Rights Reserved.</p>
+      <p className="footer-bottom-p">&copy; 2024 Go Marina. All Rights Reserved.</p>
     </div>
   </footer>
 );

@@ -146,8 +146,8 @@ const Gallery = () => {
       <section className="galeri-header">
         <h2>Galeri Kami</h2>
         <p>
-          Tak Kenal maka tak sayang, lebih dekat dengan
-          <span className="highlight"> Kebun Jambu Marina</span>
+          Tak kenal maka tak sayang, lebih dekat dengan
+          <span className="highlight2"> Kebun Jambu Marina</span>
         </p>
         <p className="slogan">
           "Jelajahi keindahan kebun dan berbagai momen menarik yang terabadikan
