@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .sign-up {
+    background-color: #e7f0dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    max-width: 1400px;
+    height: 90vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .welcome-section {
+    background-color: #e7f0dd;
+    color: #000000;
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .welcome-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .form-section {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+  
+  .form-section h2 {
+    color: #01241e;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #01241e;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="file"],
+  input[type="number"],
+  textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-top: 5px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #e7f0dd;
+  }
+  
+  textarea {
+    resize: none;
+    height: 50px;
+  }
+  
+  .password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .password-field input[type="password"] {
+    flex: 1;
+    padding: 8px;
+  }
+  
+  .icon-eye {
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #597545;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #01241e;
+  }
+  
+  h1 {
+    margin-right: 60px;
+  }
+  
+  .description {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-right: 60px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  p a {
+    color: rgb(rgb(12, 100, 232));
+    text-decoration: underline;
+  }
+  
+  .logo-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 60px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .password-field input[type="password"] {
+    flex: 1;
+    padding: 8px;
+  }
+  
+  .icon-eye {
+    font-size: 17px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* Address Section */
+  fieldset {
+    border: 1px solid #01241e;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100px 1fr; /* Two columns for better alignment */
+    gap: 5px; /* Set gap between the input fields */
+  }
+  
+  legend {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #01241e;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  fieldset label {
+    font-size: 0.85rem;
+    margin-bottom: 5px; /* Adding space between label and input */
+  }
+  
+  fieldset input,
+  fieldset textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 1px solid #01241e;
+    margin-bottom: 10px; /* Adding space between each input field */
+  }
+  

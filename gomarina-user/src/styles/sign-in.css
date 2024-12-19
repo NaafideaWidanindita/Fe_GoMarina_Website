@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: auto; /* Allow scrolling */
+}
+
+.sign-in {
+  background-color: #e7f0dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+}
+
+.content-wrapper-signin {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  max-width: 1400px;
+  height: 90vh;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.welcome-section-signin {
+  background-color: #e7f0dd;
+  color: #000000;
+  padding: 20px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-section-signin h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.welcome-section-signin p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-section-signin {
+  background-color: #ffffff;
+  padding: 20px 20px 20px 5px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.form-section-signin h2 {
+  color: #01241e;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-left: -15px;
+}
+
+.form-section-signin form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-section-signin form label {
+  font-size: 0.9rem;
+  color: #01241e;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  margin-top: 5px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #e7f0dd;
+}
+
+textarea {
+  resize: none;
+  height: 50px;
+}
+
+.password-field-signin {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-field-signin input[type="password"] {
+  flex: 1;
+  padding: 8px;
+}
+
+.icon-eye {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #597545;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #01241e;
+}
+
+.welcome-section-signin h1 {
+  margin-right: 60px;
+  text-align: center;
+}
+
+.description-signin {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: center;
+  margin-right: 50px;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #000000;
+}
+
+p a {
+  color: rgb(12, 100, 232); /* Corrected color value */
+  text-decoration: underline;
+}
+
+.logo-wrapper-signin {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 110px;
+}
+
+.logo-utama {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 160px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
