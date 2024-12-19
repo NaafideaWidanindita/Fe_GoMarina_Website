@@ -17,11 +17,13 @@ body {
     margin-left: -1rem;
     margin-top: -7px;
     border-bottom-right-radius: 8px;
+    z-index: 1000;
+    pointer-events: none;
 }
 
 .main-container {
     max-width: 100%;
-    height: 1507px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -146,17 +148,18 @@ body {
     font-weight: bold;
     flex-grow: 1;
     padding: 10px 20px;
-    background-color: #6CE9BF;
+    background-color: #597545;
     max-width: 110px;
     border: none;
     cursor: pointer;
-    color: #303030;
+    color: white;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .confirm-btn button:hover {
     transform: translateZ(10px);
     background: white;
+    color: #303030;
     text-decoration: underline;
 }
 /* End of Header */
@@ -164,14 +167,17 @@ body {
 /* Sidebar */
 .sidebar {
     width: 240px;
-    height: 1355px;
+    height: 100vh;
     flex-shrink: 0;
     background-color: white;
-    margin-top: -6.3rem;
+    margin-top: 0.7rem;
     margin-left: -1rem;
-    padding-top: 10rem;
+    padding-top: 3rem;
     /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
     border-bottom-right-radius: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .sidebars {
@@ -220,6 +226,446 @@ body {
     background-color: #597545;
 }
 /* End of Sidebar */
+
+/* Dashboard */
+.dashboard {
+    margin-top: -40rem;
+}
+
+.overview{
+    padding: 20px 30px;
+    width: 92%;
+    margin-top: 2rem;
+    margin-left: 2.8rem;
+}
+
+.overview h1 {
+    font-family: "Poppins";
+    font-size: 42px;
+    color: white;
+    -webkit-text-stroke: 2px #597545;
+    /* border: 4px solid #1E564D; */
+    margin-bottom: 10px;
+    margin-left: 14rem;
+}
+
+.cards-dash {
+    margin-top: -1rem;
+    margin-left: -4rem;
+}
+
+.card-confirmed-dash {
+    display: flex;
+    width: 220px;
+    height: 153px;
+    padding: 11px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: #F9A21B;
+    margin-left: 18rem;
+    margin-top: 3.8rem;
+}
+
+.card-pending-dash {
+    display: flex;
+    width: 250px;
+    height: 153px;
+    padding: 11px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #C83636;
+    margin-left: 37rem;
+    margin-top: -11rem;
+}
+
+.card-confirmed-dash img {
+    width: 22px;
+    height: 22px;
+}
+
+.card-pending-dash img {
+    width: 22px;
+    height: 22px;
+    padding-top: -0.6rem;
+}
+
+.card-confirmed-dash h2 {
+    color: white;
+    font-family: "Poppins";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 56.25% */
+    letter-spacing: -0.48px;
+    margin-top: 1.6rem;
+}
+
+.card-pending-dash h2 {
+    color: white;
+    font-family: "Poppins";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 56.25% */
+    letter-spacing: -0.48px;
+    margin-top: 2.3rem;
+}
+
+.card-confirmed-dash p {
+    color: #FFF;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.1px;
+    margin-top: -2rem;
+}
+
+.card-pending-dash p {
+    color: #FFF;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.1px;
+    margin-top: -1.5rem;
+}
+
+.main-content h2{
+    margin-top: 20px;
+}
+
+.orders-zip {
+    margin-top: 6rem;
+}
+
+.payments-zip {
+    margin-top: 2rem;
+}
+
+.order-section,
+.payment-section {
+    margin-top: 20px;
+    margin-left: 16rem;
+    border: 1px solid rgb(180, 178, 178);
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+}
+
+.order-section h2,
+.payment-section h2 {
+    margin: 10px 0;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead{
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-size: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead tr{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+tbody{
+    border-radius: 10px;
+    font-size: 12px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 10px;
+}
+
+thead {
+    background-color: var(--main-bg-color);
+    color: var(--text-color-light);
+    font-size: 12px;
+    /* border-radius: 15px; */
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #ddd;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+}
+
+tbody tr td {
+    border-top: 1px solid #e0e0e0;
+}
+
+tbody tr td:first-child,thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+tbody tr td:last-child, thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.detail-btn{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+.view-section{
+    background-color: white;
+    padding: 3px;
+    margin-top: -50px;
+    position: absolute;
+    width:93%;
+    left: 30px;
+    bottom: 26px;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.view-btn {
+    font-family: "Poppins";
+    font-weight: 500;
+    padding: 6px 16px;
+    background-color: #597545;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 10%;
+    font-size: 12px;
+}
+
+.view-btn:hover {
+    background-color: #53843A;
+    color: white;
+}
+
+/* Product */
+.text-side-prod {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; 
+    letter-spacing: -0.262px;
+    padding-top: 52px;
+    padding-left: 30px;
+}
+
+.search-period-wrapper-prod {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 100%;
+    padding: 0 20px;
+    gap: 1rem;
+}
+
+.searchbar-prod {
+    width: 457px;
+    height: 45px;
+    flex-shrink: 0;
+    background-color: #FFF;
+    border: 1px solid #000;
+    border-radius: 7px;
+    margin-left: 14rem;
+    margin-top: -1.8rem;
+}
+
+.text-search-prod {
+    display: flex;
+    width: 457px;
+    height: 46px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #A8A8A8;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; 
+    padding-left: 15px;
+}
+
+.line-search-prod {
+    width: 2px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 1px;
+    background-color: #D9D9D9;
+    margin-left: 25.3rem;
+    margin-top: -2.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.searchbar-prod img {
+    width: 25.636px;
+    height: 27.17px;
+    flex-shrink: 0;
+    margin-left: 26.1rem;
+    margin-top: -45.8px;
+    margin-bottom: 55px;
+}
+
+.manage-products {
+    margin-top: 50rem;
+}
+
+.product-cards {
+    padding-top: 8rem;
+}
+
+.product-card {
+    display: flex;
+    background-color: white;
+    border: 2px solid #DADADA;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    width: 69.6%;
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 18rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 1;
+    max-width: 40%;
+}
+
+.product-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.price {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stock-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333;
+    cursor: default;
+}
+
+.review-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.rating {
+    color: #FFD700;
+    font-size: 30px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    size: 14px;
+}
+
+.btn-action{
+    border: none;
+    padding: 5px 8px;
+    align-self: center;
+    background-color: var(--main-bg-color);
+    color: var(--highlight-color);
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* Orders */
 .text-side-ord {
@@ -302,7 +748,7 @@ body {
     flex-shrink: 0;
     border-radius: 15px;
     border: 2px solid #FFF;
-    background: #1E564D;
+    background: #597545;
     margin-right: 12px;
     margin-top: -28px;
     align-items: center;
@@ -332,15 +778,23 @@ body {
     flex-shrink: 0;
 }
 
+.manage-orders {
+    margin-top: 48rem;
+}
+
 .orders {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 16.4rem;
+    padding-left: 17.2rem;
     padding-top: 7rem;
 }
 
-/* .card-confirmed {
+.cards-ord {
+    padding-left: -8rem;
+}
+
+.card-done-ord {
     display: flex;
     width: 220px;
     height: 153px;
@@ -354,7 +808,7 @@ body {
     margin-top: 3.8rem;
 }
 
-.card-pending {
+.card-pending-ord {
     display: flex;
     width: 250px;
     height: 153px;
@@ -368,18 +822,29 @@ body {
     margin-top: -11rem;
 }
 
-.card-confirmed img {
+.card-done-ord img {
     width: 22px;
     height: 22px;
 }
 
-.card-pending img {
+.card-pending-ord img {
     width: 22px;
     height: 22px;
     padding-top: -0.6rem;
 }
 
-.card-confirmed h2 {
+.card-done-ord h2 {
+    color: white;
+    font-family: "Poppins";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 56.25% */
+    letter-spacing: -0.48px; 
+    margin-top: 1.6rem; 
+}
+
+.card-pending-ord h2 {
     color: white;
     font-family: "Poppins";
     font-size: 64px;
@@ -387,21 +852,10 @@ body {
     font-weight: 600;
     line-height: 36px; /* 56.25% */
     /* letter-spacing: -0.48px; */
-    /* margin-top: 1.6rem; */
-/* } */
+    margin-top: 2.3rem;
+} 
 
-/* .card-pending h2 {
-    color: white;
-    font-family: "Poppins";
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px; /* 56.25% */
-    /* letter-spacing: -0.48px; */
-    /* margin-top: 2.3rem; */
-/* } */ */
-
-/* .card-confirmed p {
+.card-done-ord p {
     color: #FFF;
     font-family: "Poppins";
     font-size: 20px;
@@ -409,10 +863,10 @@ body {
     font-weight: 600;
     line-height: 28px; /* 140% */
     /* letter-spacing: -0.1px; */
-    /* margin-top: -2rem; */
-/* } */
+    margin-top: -2rem;
+} 
 
-/* .card-pending p {
+.card-pending-ord p {
     color: #FFF;
     font-family: "Poppins";
     font-size: 20px;
@@ -420,8 +874,8 @@ body {
     font-weight: 600;
     line-height: 28px; /* 140% */
     /* letter-spacing: -0.1px; */
-    /* margin-top: -1.5rem; */
-/* } */
+    margin-top: -1.5rem;
+}
 
 .orders h2 {
     color: black;
@@ -467,76 +921,70 @@ body {
     align-items: center;
 }
 
-table {
+.order-table {
     width: 88%;
     margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 10px;
     border-radius: 10px;
-    overflow: hidden;
     margin-top: 1.6rem;
-    margin-left: 16rem;
+    margin-left: 17rem;
 }
 
-thead {
+.order-table thead {
     border-radius: 10px;
-    background-color: #1E564D;
+    background-color: #597545;
     color: white;
     font-size: 12px;
     height: 40px;
-    overflow: hidden;
     font-family: "Poppins";
 }
 
-thead tr {
-    overflow: hidden;
+.order-table thead tr {
     border-radius: 10px;
 }
 
-tbody {
+.order-table tbody {
     border-radius: 10px;
     font-size: 12px;
     /* border-radius: 10px; */
-    overflow: hidden;
     font-family: "Poppins";
 }
 
-table th,
-table td {
+.order-table th, td {
     padding: 15px !important;
 }
 
-table {
+.order-table {
     width: 88%;
     border-collapse: separate;
     border-spacing: 0 10px;
     padding: 10px;
 }
 
-table {
-    width: 88%;
-    height: 585px;
+.order-table {
+    width: 75%;
+    height: auto;
     flex-shrink: 0;
     border-radius: 12px;
     border: 2px solid #D0D0D0;
     background: #FFF;
 }
 
-thead {
-    background-color: #1E564D;
+.order-table thead {
+    background-color: #597545;
     color: white;
     font-size: 12px;
     /* border-radius: 15px; */
 }
 
-table th,
-table td {
+.order-table th, td {
     padding: 15px !important;
     text-align: left;
     font-size: 10px;
 }
 
-.detail-btn {
+.order-table .detail-btn {
     background-color: #ddd;
     border: #ddd;
     font-family: "Poppins";
@@ -546,43 +994,46 @@ table td {
     cursor: pointer;
 }
 
-td img {
-    width: 22px;
-    height: 22px;
+.order-table td img {
+    width: 100px;
+    height: auto;
 }
 
-tbody tr {
+.order-table tbody tr {
     background-color: #ddd;
     /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
 }
 
-.total-row td {
+.order-table .total-row td {
     font-weight: bold;
     font-size: 11px;
 }
 
-tbody tr td {
+.order-table tbody tr td {
     border-top: 1px solid #e0e0e0;
 }
 
-tbody tr td:first-child,thead tr th:first-child {
+.order-table tbody tr td:first-child,thead tr th:first-child {
     border-radius: 8px 0 0 8px;
 }
 
-tbody tr td:last-child, thead tr th:last-child {
+.order-table tbody tr td:last-child, thead tr th:last-child {
     border-radius: 0 8px 8px 0;
 }
+
+/* Detail Orders */
 
 /* Content */
 .side {
     width: 100%;
-    max-width: 1031.6px;
+    max-width: 1050.6px;
     height: 101px;
     flex-shrink: 0;
     background-color: #597545;
-    margin-left: 14rem;
-    margin-top: -0.5rem;
+    margin-left: -10rem;
+    margin-top: -0rem;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 22.8rem;
 }
 
 .text-side {
@@ -604,6 +1055,7 @@ tbody tr td:last-child, thead tr th:last-child {
     max-width: 100%;
     padding: 0 20px;
     gap: 1rem;
+    z-index: 1000;
 }
 
 .searchbar {
@@ -662,7 +1114,7 @@ tbody tr td:last-child, thead tr th:last-child {
     border: 2px solid #fff;
     border-radius: 15px;
     margin-right: 42px;
-    margin-top: -54px;
+    margin-top: -48px;
     cursor: pointer;
 }
 
@@ -705,7 +1157,7 @@ tbody tr td:last-child, thead tr th:last-child {
     border: 2px solid #fff;
     border-radius: 15px;
     margin-left: -50px;
-    margin-top: -54px;
+    margin-top: -48px;
     cursor: pointer;
 }
 
@@ -713,6 +1165,10 @@ tbody tr td:last-child, thead tr th:last-child {
     width: 35px;
     height: 35px;
     flex-shrink: 0;
+}
+
+.contents {
+    margin-top: 48rem;
 }
 
 .content-option {
@@ -1843,6 +2299,10 @@ tbody tr td:last-child, thead tr th:last-child {
     flex-shrink: 0;
 }
 
+.sales-report {
+    margin-top: 48rem;
+}
+
 .sales-report-period {
     padding-left: 16.4rem;
     padding-top: 9rem;
@@ -1901,7 +2361,7 @@ table {
 
 thead {
     border-radius: 10px;
-    background-color: #1E564D;
+    background-color: #597545;
     color: white;
     font-size: 12px;
     height: 40px;;
@@ -1944,7 +2404,7 @@ table {
 }
 
 thead {
-    background-color: #1E564D;
+    background-color: #597545;
     color: white;
     font-size: 12px;
     /* border-radius: 15px; */
@@ -1981,17 +2441,22 @@ tbody tr td:last-child, thead tr th:last-child {
 /* End of Sales Report */
 
 /* Manage Payments */
+.manage-payments {
+    padding-top: -20rem;
+    padding-left: 20rem;
+    margin-top: 48rem;
+}
 .text-side-pym {
     color: #FFF;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 27px;
-    font-style: normal;
     font-weight: 600;
     line-height: 36px; 
     letter-spacing: -0.262px;
-    margin-top: -10px;
-    padding-top: 26px;
-    padding-left: 30px;
+    margin-top: -20rem; 
+    padding-top: 2rem;
+    margin-left: -18rem;
+    margin-bottom: 20rem;
 }
 
 .search-period-wrapper-pym {
@@ -1999,8 +2464,9 @@ tbody tr td:last-child, thead tr th:last-child {
     align-items: center;
     justify-content: space-between; 
     max-width: 100%;
-    padding: 0 30px;
+    margin-top: -10rem;
     gap: 1rem;
+    margin-top: 2rem; 
 }
 
 .searchbar-pym {
@@ -2010,8 +2476,8 @@ tbody tr td:last-child, thead tr th:last-child {
     background-color: #FFF;
     border: 1px solid #000;
     border-radius: 7px;
-    margin-left: 14rem;
-    margin-top: -5.8rem;
+    margin-left: 0; 
+    margin-top: 0; 
 }
 
 .text-search-pym {
@@ -2065,26 +2531,21 @@ tbody tr td:last-child, thead tr th:last-child {
     display: flex;
     width: 125px;
     height: 60px;
-    flex-shrink: 0;
     border-radius: 15px;
     border: 2px solid #FFF;
     background: #597545;
     margin-right: 15px;
-    margin-top: -47px;
-    margin-bottom: 50px;
+    margin-top: 0; /* Atur margin-top untuk posisi yang lebih baik */
     align-items: center;
     justify-content: center;
     gap: -1rem;
-    cursor: pointer;
 }
 
 .btn-month-pym, .btn-year-pym span {
     color: #FFF;
     font-family: "Inter";
     font-size: 16px;
-    font-style: normal;
     font-weight: bold;
-    line-height: normal;
 }
 
 .btn-month-pym img {
@@ -2221,16 +2682,17 @@ tbody tr td:last-child, thead tr th:last-child {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 16.4rem;
-    padding-top: 7rem;
+    padding-left: 14rem;
+    margin-top: 6rem;
+    margin-left: -18rem;
 }
 
-.cards {
-    margin-top: -2rem;
-    margin-left: -1.8rem;
+.cards-pym {
+    margin-top: 6rem;
+    margin-left: -20.6rem;
 }
 
-.card-confirmed {
+.card-confirmed-pym {
     display: flex;
     width: 220px;
     height: 153px;
@@ -2244,7 +2706,7 @@ tbody tr td:last-child, thead tr th:last-child {
     margin-top: 3.8rem;
 }
 
-.card-pending {
+.card-pending-pym {
     display: flex;
     width: 250px;
     height: 153px;
@@ -2258,18 +2720,18 @@ tbody tr td:last-child, thead tr th:last-child {
     margin-top: -11rem;
 }
 
-.card-confirmed img {
+.card-confirmed-pym img {
     width: 22px;
     height: 22px;
 }
 
-.card-pending img {
+.card-pending-pym img {
     width: 22px;
     height: 22px;
     padding-top: -0.6rem;
 }
 
-.card-confirmed h2 {
+.card-confirmed-pym h2 {
     color: white;
     font-family: "Poppins";
     font-size: 64px;
@@ -2280,7 +2742,7 @@ tbody tr td:last-child, thead tr th:last-child {
     margin-top: 1.6rem;
 }
 
-.card-pending h2 {
+.card-pending-pym h2 {
     color: white;
     font-family: "Poppins";
     font-size: 64px;
@@ -2291,7 +2753,7 @@ tbody tr td:last-child, thead tr th:last-child {
     margin-top: 2.3rem;
 }
 
-.card-confirmed p {
+.card-confirmed-pym p {
     color: #FFF;
     font-family: "Poppins";
     font-size: 20px;
@@ -2302,7 +2764,7 @@ tbody tr td:last-child, thead tr th:last-child {
     margin-top: -2rem;
 }
 
-.card-pending p {
+.card-pending-pym  p {
     color: #FFF;
     font-family: "Poppins";
     font-size: 20px;
@@ -2321,7 +2783,7 @@ tbody tr td:last-child, thead tr th:last-child {
     font-weight: 600;
     line-height: 36px; 
     letter-spacing: -0.15px;
-    margin: 0;
+    padding-left: 2rem;
 }
 
 .options-btn {
@@ -2334,8 +2796,9 @@ tbody tr td:last-child, thead tr th:last-child {
     border: 1px solid #1E1E1E;
     background-color: white;
     margin-right: 2rem;
-    gap: 0.6rem;
+    gap: -2rem;
     cursor: pointer;
+    margin-right: 3rem;
 }
 
 .options-btn span {
@@ -2357,54 +2820,50 @@ tbody tr td:last-child, thead tr th:last-child {
     align-items: center;
 }
 
-table {
-    width: 78%;
+.payment-table {
+    width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 10px;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 1.6rem;
-    margin-left: 16rem;
+    margin-top: -1rem; 
+    margin-left: -2.6rem;
 }
 
-thead {
-    border-radius: 10px;
-    background-color: #1E564D;
+.payment-table thead {
+    background-color: #597545;
     color: white;
     font-size: 12px;
     height: 40px;
-    overflow: hidden;
     font-family: "Poppins";
 }
 
-thead tr {
+.payment-table thead tr {
     overflow: hidden;
     border-radius: 10px;
 }
 
-tbody {
+.payment-table tbody {
     border-radius: 10px;
     font-size: 12px;
-    /* border-radius: 10px; */
     overflow: hidden;
     font-family: "Poppins";
 }
 
-table th,
-table td {
+.payment-table th, td {
     padding: 10px !important;
 }
 
-table {
-    width: 78%;
+.payment-table {
+    width: 100%;
     border-collapse: separate;
     border-spacing: 0 10px;
     padding: 10px;
 }
 
-table {
-    width: 78%;
+.payment-table {
+    width: 100%;
     height: 585px;
     flex-shrink: 0;
     border-radius: 12px;
@@ -2412,54 +2871,53 @@ table {
     background: #FFF;
 }
 
-thead {
-    background-color: #1E564D;
+.payment-table thead {
+    background-color: #597545;
     color: white;
     font-size: 12px;
     /* border-radius: 15px; */
 }
 
-table th,
-table td {
+.payment-table th, td {
     padding: 10px !important;
     text-align: left;
-    font-size: 10px;
+    font-size: 16px !important;
 }
 
 .detail-btn {
     background-color: #ddd;
     border: #ddd;
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
 }
 
-td img {
-    width: 22px;
-    height: 22px;
+.payment-table td img {
+    width: 200px;
+    height: auto;
 }
 
-tbody tr {
-    background-color: #ddd;
+.payment-table tbody tr {
+    background-color: #ddd !important;
     /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
 }
 
-.total-row td {
+.payment-table .total-row td {
     font-weight: bold;
     font-size: 11px;
 }
 
-tbody tr td {
+.payment-table tbody tr td {
     border-top: 1px solid #e0e0e0;
 }
 
-tbody tr td:first-child,thead tr th:first-child {
+.payment-table tbody tr td:first-child,thead tr th:first-child {
     border-radius: 8px 0 0 8px;
 }
 
-tbody tr td:last-child, thead tr th:last-child {
+.payment-table tbody tr td:last-child, thead tr th:last-child {
     border-radius: 0 8px 8px 0;
 }
 
@@ -2497,7 +2955,8 @@ tbody tr td:last-child, thead tr th:last-child {
 }
 
 .image-proof img {
-    padding-top: 5rem;
+    width: 100%;
+    height: 100%;
 }
 
 /* Table Detail */
@@ -2568,7 +3027,7 @@ tbody tr td:last-child, thead tr th:last-child {
     font-family: "Poppins";
     font-size: 12px;
     border: none;
-    color: white;
+    color: black;
     font-style: normal;
     font-weight: 600;
     cursor: pointer;
@@ -2579,10 +3038,11 @@ tbody tr td:last-child, thead tr th:last-child {
     font-family: "Poppins";
     font-size: 12px;
     border: none;
-    color: white;
+    color: black;
     font-style: normal;
     font-weight: 600;
     cursor: pointer;
+    margin-left: -0.2rem;
 }
 
 .invalid-btn {
@@ -2590,11 +3050,11 @@ tbody tr td:last-child, thead tr th:last-child {
     font-family: "Poppins";
     font-size: 12px;
     border: none;
-    color: white;
+    color: black;
     font-style: normal;
     font-weight: 600;
-    width: 110px;
     cursor: pointer;
+    margin-right: 6rem;
 }
 
 .payment-table td:first-child {

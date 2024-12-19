@@ -1,7 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
 import Pesanan from "./pages/Pesanan";
+import Product from "./pages/Product";
+import Detailpesanan from "./pages/Detailpesanan";
 import Kelolakonten from "./pages/Kelolakonten";
 import Tambahkonten from "./pages/Tambahkonten";
 import Kelolapembayaran from "./pages/Kelolapembayaran";
@@ -16,7 +19,11 @@ function App() {
         <Sidebar />
         <main className="content">
           <Routes>
+            <Route path="/" element={<Navigate to="/dashboard" />} />
+            <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/pesanan" element={<Pesanan />} />
+            <Route path="/detailpesanan" element={<Detailpesanan />} />
+            <Route path="/product" element={<Product />} />
             <Route path="/kelolakonten" element={<Kelolakonten />} />
             <Route path="/tambahkonten" element={<Tambahkonten />} />
             <Route path="/kelolapembayaran" element={<Kelolapembayaran />} />

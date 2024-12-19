@@ -1,14 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar =() => {
-    // State menyimpan item yang aktif
-    const [activeItem, setActiveItem] = useState(null);
+    const location = useLocation();
+    const [activeItem, setActiveItem] = useState("");
 
-    // Fungsi klik item sidebar
-    const handleItemClick = (item) => {
-        setActiveItem(item); // Set item diklik aktif
-    };
+    useEffect(() => {
+        setActiveItem(location.pathname); // Update item aktif sesuai path
+    }, [location.pathname]);
+
+    console.log(
+        "Dashboard item active?",
+        location.pathname === "/dashboard"
+    );
 
     return (
         <>
@@ -17,18 +21,18 @@ const Sidebar =() => {
         
         <aside className="sidebar">
             <div className="sidebars">
-                <div className={`sidebar-item ${activeItem === "dashboard" ? "active" : ""}`} 
+                <div className={`sidebar-item ${location.pathname === "dashboard" ? "active" : ""}`} 
                         onClick={() => handleItemClick("dashboard")}
                 >
-                    <Link to="/">
+                    <Link to="/dashboard">
                         <img src="src/assets/material-symbols_home (1).svg" alt="" style={{ marginBottom: '-0.8rem' }} />
                         <div className="text" style={{ paddingBottom: '0.4rem' }}>Dashboard</div>
                     </Link>
                 </div>
-                <div className={`sidebar-item ${activeItem === "produk" ? "active" : ""}`} 
-                        onClick={() => handleItemClick("produk")} 
+                <div className={`sidebar-item ${activeItem === "product" ? "active" : ""}`} 
+                        onClick={() => handleItemClick("product")} 
                 >
-                    <Link to="/produk">
+                    <Link to="/product">
                         <img src="src/assets/material-symbols_orders-rounded (1).svg" alt="" style={{ marginBottom: '-1.4rem' }} />
                         <div className="text" style={{ paddingBottom: '0.4rem' }}>Produk</div>
                     </Link>

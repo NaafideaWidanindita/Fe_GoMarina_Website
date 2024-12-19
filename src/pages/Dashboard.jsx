@@ -1,23 +1,23 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Pesanan = () => {
-    // Data pesanan yang ditampilkan di tabel
-const ordersData = [
+const Dashboard = () => {
+  // Contoh data pesanan dan pembayaran untuk keperluan tampilan
+  const ordersData = [
     { id: '111', date: '2024-12-15', name: 'User', product: 'Jambu Segar Merah', amount: 'Mandiri', total: 'Rp 35.000', status: 'Pending', id_pym: '1', shipment: 'Pending' },
     { id: '112', date: '2024-12-15', name: 'User', product: 'Jambu Segar Merah', amount: 'Mandiri', total: 'Rp 35.000', status: 'Pending', id_pym: '2', shipment: 'Pending' },
-];
+  ];
 
-const getStatusStyle = (status) => {
-    if (status === 'Pending') {
-        return { color: '#C83636' };
-    } else if (status === 'Proses') {
-        return { color: '#322DBF' };
-    }
-    return {};
-};
+    const getStatusStyle = (status) => {
+      if (status === 'Pending') {
+          return { color: '#C83636' };
+      } else if (status === 'Proses') {
+          return { color: '#322DBF' };
+      }
+      return {};
+  };
 
-const getShipmentStyle = (shipment) => {
+  const getShipmentStyle = (shipment) => {
     if (shipment === 'Pending') {
         return { color: '#C83636' };
     } else if (shipment === 'Dikemas') {
@@ -28,56 +28,51 @@ const getShipmentStyle = (shipment) => {
 
 // Fungsi navigasi ke halaman detail pembayaran
 const handleDetailClick = (order) => {
-    if (!order || !order.id) {
-        console.warn("Data pesanan tidak valid untuk navigasi.");
-        return;
-    }
-    navigate("/detailpesanan", { state: { order } });
+  if (!order || !order.id) {
+      console.warn("Data pesanan tidak valid untuk navigasi.");
+      return;
+  }
+  navigate("/detailpesanan", { state: { order } });
 };
 
-return (
-    <div className="manage-orders">
-        <div className="side-tools" style={{ marginTop: '-96rem', marginLeft: '14rem'}}>
-                <div className="text-side-ord">Pesanan
-                </div>
-                <div className="search-period-wrapper-ord" style={{ marginTop: '-1.1rem'}}>
-                        <div className="searchbar-ord">
-                            <div className="text-search-ord">Cari</div>
-                            <div className="line-search-ord"></div>
-                            <img src="src/assets/Group 2.png" alt="" />
+    return (
+      <div className="dashboard">
+        <div className="side-tools" style={{ marginTop: '-47rem', marginLeft: '14rem' }}>
+          <div className="text-side">Dashboard</div>
+                    <div className="search-add-wrapper">
+                        <div className="searchbar">
+                            <div className="text-search">Cari</div>
+                            <div className="line-search"></div>
+                            <img src="src/assets/Group 2.png" alt="Search Icon" />
                         </div>
-                        <button className="btn-month-ord">
-                            <span>Oktober</span>
-                            <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                        <button className="btn-add">
+                            <img src="src/assets/material-symbols_add-2-rounded (1).svg" alt="Tambah" />
                         </button>
-                        <button className="btn-year-ord">
-                            <span>2024</span>
-                            <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                        <button className="btn-delete">
+                            <img src="src/assets/material-symbols_delete.svg" alt="Hapus" />
                         </button>
-                </div>
+                    </div>
         </div>
-        <div className="cards-ord">
-            <div className="card-done-ord">
+        <div className="overview">
+          <h1>Apa yang perlu di cek hari ini?</h1>
+          <div className="cards-dash">
+            <div className="card-confirmed-dash">
                 <img src="src/assets/IC SELESAI.svg" alt="" />
-                <h2>6</h2>
-                <p>Pesanan Selesai</p>
+                <h2>2</h2>
+                <p>Pesanan Hari ini</p>
             </div>
-            <div className="card-pending-ord">
+            <div className="card-pending-dash">
                 <img src="src/assets/alarm.png" alt="" />
                 <h2>2</h2>
                 <p>Pending</p>
             </div>
         </div>
-        <div className="orders">
-            <h2>Kelola Pesanan</h2>
-            <button className="options-btn">
-            <span>Terbaru</span>
-            <img src="src/assets/Vector (2).svg" alt="" />
-        </button>
-        </div>
-    
-        <div className="orders-table">
-            <table className="order-table">
+
+          <div className="orders-zip">
+          <h2 style={{ marginLeft: '16rem'}}>Lihat pesanan terbaru hari ini</h2>
+            <div className="order-section">
+            <div className="orders-table">
+            <table className="order-table" style={{ marginLeft: '0.5rem', width: '98%'}}>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -112,8 +107,17 @@ return (
                 </tbody>
             </table>
         </div>
-    </div>
-);
-};
+                <div className="view-section">
+                    <Link to={'/pesanan'} className='view-btn'>
+                        Lihat di Pesanan
+                    </Link>
+                </div>
+            </div>
+          </div>
 
-export default Pesanan;
+        </div>
+      </div>
+  );
+}
+
+export default Dashboard;

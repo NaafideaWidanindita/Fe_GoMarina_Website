@@ -1,78 +1,17 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import AxiosInterceptors from "../utils/AxiosInterceptors";
 
-const Detailpembayaran = () => {
+const Detailpesanan = () => {
     const [showPopup, setShowPopup] = useState(false);
     const { state } = useLocation();
     const payment = state?.payment;
     const [saveButtonColor, setSaveButtonColor] = useState("#B6BDBF");
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [paymentsData, setPaymentsData] = useState([]); // Deklarasikan state untuk data pembayaran
 
     if (!payment) {
         return <div>Data pembayaran tidak ditemukan!</div>;
     }
-
-    // Fungsi untuk mengambil data dari API
-    const getData = async () => {
-        setLoading(true);
-        setError(null); // Reset error sebelum memulai request
-        try {
-            const result = await AxiosInterceptors.get("/api/v1/payment");
-            console.log("Respons Data API:", result.data); // Log respons API
-            setPaymentsData(result.data.data || []); // Simpan data ke state
-        } catch (error) {
-            console.error("Error fetching data:", error.response || error); // Log error
-            setError(
-                error.response?.data?.message || "Terjadi kesalahan saat memuat data."
-            );
-        } finally {
-            setLoading(false); // Hentikan loading
-        }
-    };
-
-    // Ambil data saat komponen pertama kali dimuat
-    useEffect(() => {
-        getData();
-    }, []);
-
-    const updateData = async () => {
-        setLoading(true);
-        setError(null); // Reset error sebelum memulai request
-        try {
-            const payload = {
-                status,
-            };
-    
-            const result = await AxiosInterceptors.put(`/api/v1/payment/${payment.id}`, payload);
-            console.log("Respons Update API:", result.data); // Log respons API
-            alert("Status pembayaran berhasil diperbarui!");
-
-            console.log("Navigasi akan dijalankan sekarang.");
-            navigate("/kelolapembayaran");
-        } catch (error) {
-            console.error("Error updating data:", error.response || error); // Log error
-            setError(
-                error.response?.data?.message || "Terjadi kesalahan saat memperbarui data."
-            );
-            alert("Gagal memperbarui status pembayaran!");
-        } finally {
-            setLoading(false); // Hentikan loading
-        }
-    };
-    
-    // Fungsi dipanggil saat menyimpan perubahan
-    const handleSave = () => {
-        if (status !== "pending") {
-            updateData();
-        } else {
-            alert("Status pembayaran belum diubah!");
-        }
-    };
 
     const [status, setStatus] = useState("pending");
 
@@ -140,36 +79,35 @@ const Detailpembayaran = () => {
 
     return (
         <>
-        <div className="payment-detail">
+        <div className="order-detail">
                 <div className="side-tools" style={{ marginTop: '-95rem', marginLeft: '14rem'}}>
-                    <div className="text-side">Detail Pembayaran</div>
+                    <div className="text-side">Detail Pesanan</div>
                 </div>
         </div>
-        
-        <div className="text-proof-wrapper">
-            <div className="text-proof">Bukti Pembayaran</div>
-            <div className="image-proof">{payment.image ? (
-                                            <img
-                                                src={`http://localhost:5000/api/v1${payment.image}`}
-                                                alt={`Bukti Pembayaran untuk Order ID ${payment.order_id}`}
-                                                width="100"
-                                            />
-                                        ) : (
-                                            <span>Tidak ada bukti</span>
-                                        )}</div>
-        </div>
 
-        <div className="payment-detail-grid">
+        <div className="order-detail-grid">
             <div className="grid-item">
                 ID
                 <div className="tab-detail">{payment.id}</div>
             </div>
             <div className="grid-item">
-                Order ID
+                Tanggal
                 <div className="tab-detail">{payment.order_id === null && <p style={{ fontFamily: "Poppins", fontSize: "16px", marginTop: '-6px'}}>-</p>}</div>
             </div>
             <div className="grid-item">
-                Opsi Pembayaran
+                Username
+                <div className="tab-detail">{payment.option}</div>
+            </div>
+            <div className="grid-item">
+                Jumlah
+                <div className="tab-detail">{payment.option}</div>
+            </div>
+            <div className="grid-item">
+                Total
+                <div className="tab-detail">{payment.option}</div>
+            </div>
+            <div className="grid-item">
+                Opsi Pengiriman
                 <div className="tab-detail">{payment.option}</div>
             </div>
         </div>
@@ -231,4 +169,4 @@ const Detailpembayaran = () => {
     )
 }
 
-export default Detailpembayaran;
+export default Detailpesanan;

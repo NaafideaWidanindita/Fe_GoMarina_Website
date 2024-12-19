@@ -68,7 +68,7 @@ const closeYear = () => {
 
 return (
     <div className="sales-report">
-        <div className="side-tools" style={{ marginTop: '-96rem', marginLeft: '14rem'}}>
+        <div className="side-tools" style={{ marginTop: '-95.6rem', marginLeft: '14rem'}}>
                 <div className="text-side-sales">
                     <div>Laporan</div>
                     <div>Penjualan</div>
