@@ -25,7 +25,7 @@ const Sidebar =() => {
                         onClick={() => handleItemClick("dashboard")}
                 >
                     <Link to="/dashboard">
-                        <img src="src/assets/material-symbols_home (1).svg" alt="" style={{ marginBottom: '-0.8rem' }} />
+                        <img src="https://img.icons8.com/?size=100&id=84005&format=png&color=1A1A1A" alt="" style={{ marginBottom: '-0.8rem' }} />
                         <div className="text" style={{ paddingBottom: '0.4rem' }}>Dashboard</div>
                     </Link>
                 </div>
@@ -33,7 +33,7 @@ const Sidebar =() => {
                         onClick={() => handleItemClick("product")} 
                 >
                     <Link to="/product">
-                        <img src="src/assets/material-symbols_orders-rounded (1).svg" alt="" style={{ marginBottom: '-1.4rem' }} />
+                        <img src="https://img.icons8.com/?size=100&id=Vfx42bq0G2lJ&format=png&color=1A1A1A" alt="" style={{ marginBottom: '-1.4rem' }} />
                         <div className="text" style={{ paddingBottom: '0.4rem' }}>Produk</div>
                     </Link>
                 </div>
@@ -41,7 +41,7 @@ const Sidebar =() => {
                         onClick={() => handleItemClick("pesanan")}
                         >
                     <Link to="/pesanan">
-                        <img src="src/assets/material-symbols_receipt-rounded (1).svg" alt="" style={{ marginBottom: '-1.2rem'}} />
+                        <img src="https://img.icons8.com/?size=100&id=ounKChUYWi9r&format=png&color=1A1A1A" alt="" style={{ marginBottom: '-1.2rem'}} />
                         <div className="text" style={{ paddingBottom: '0.8rem' }}>Pesanan</div>
                     </Link>
                 </div>
@@ -49,7 +49,7 @@ const Sidebar =() => {
                         onClick={() => handleItemClick("kelolakonten")}
                 >
                     <Link to="/kelolakonten">
-                        <img src="src/assets/material-symbols_post-add (1).svg" alt="" style={{ marginBottom: '-0.2rem'}} />
+                        <img src="https://img.icons8.com/?size=100&id=IQhN1RRv9Eyq&format=png&color=1A1A1A" alt="" style={{ marginBottom: '-0.2rem'}} />
                         <div className="text" style={{ paddingBottom: '0.6rem'}}>
                             <div>Kelola</div>
                             <div>Konten</div>
@@ -60,7 +60,7 @@ const Sidebar =() => {
                         onClick={() => handleItemClick("kelolapembayaran")}
                 >
                     <Link to="/kelolapembayaran">
-                        <img src="src/assets/material-symbols_receipt-rounded (1).svg" alt="" style={{ marginBottom: '-0.2rem'}} />
+                        <img src="https://img.icons8.com/?size=100&id=qXwnM8XcdMuB&format=png&color=1A1A1A" alt="" style={{ marginBottom: '-0.2rem'}} />
                         <div className="text" style={{ paddingBottom: '0.6rem'}}>
                         <div>Kelola</div> 
                         <div>Pembayaran</div>
@@ -71,7 +71,7 @@ const Sidebar =() => {
                         onClick={() => handleItemClick("laporanpenjualan")}
                 >
                     <Link to="/laporanpenjualan">
-                        <img src="/src/assets/material-symbols_ssid-chart (1).svg" alt="" style={{ marginBottom: '-0.2rem'}} />
+                        <img src="https://img.icons8.com/?size=100&id=70640&format=png&color=1A1A1A" alt="" style={{ marginBottom: '-0.2rem'}} />
                         <div className="text" style={{ paddingBottom: '0.6rem'}}>
                         <div>Laporan</div> 
                         <div>Penjualan</div>

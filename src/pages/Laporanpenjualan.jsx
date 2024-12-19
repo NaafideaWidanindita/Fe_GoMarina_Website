@@ -77,11 +77,11 @@ return (
                         <div className="searchbar-sales">
                             <div className="text-search-sales">Cari</div>
                             <div className="line-search-sales"></div>
-                            <img src="src/assets/Group 2.png" alt="" />
+                            <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=1A1A1A" alt="" />
                         </div>
                         <button className="btn-month-sales" onClick={openMonth} ref={monthButtonRef}>
                             <span>Oktober</span>
-                            <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                            <img src="https://img.icons8.com/?size=100&id=39786&format=png&color=FFFFFF" alt="" />
                         </button>
                         {showMonthPopup && (
                             <div className="popup-month-overlay" onClick={closeMonth}>
@@ -109,7 +109,7 @@ return (
                         )}
                         <button className="btn-year-sales" onClick={openYear} ref={yearButtonRef}>
                             <span>2024</span>
-                            <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                            <img src="https://img.icons8.com/?size=100&id=39786&format=png&color=FFFFFF" alt="" />
                         </button>
                         {showYearPopup && (
                             <div className="popup-year-overlay" onClick={closeYear}>
@@ -141,7 +141,7 @@ return (
             <h2>Laporan Penjualan</h2>
             <p>Per 31 Oktober 2024</p>
         </div>
-        <button className="print-button"><img src="src/assets/Frame.png" alt="" />
+        <button className="print-button"><img src="https://img.icons8.com/?size=100&id=59866&format=png&color=1A1A1A" alt="" />
             <span>Cetak</span>
         </button>
     

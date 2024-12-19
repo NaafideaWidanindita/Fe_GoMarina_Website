@@ -44,26 +44,26 @@ return (
                         <div className="searchbar-ord">
                             <div className="text-search-ord">Cari</div>
                             <div className="line-search-ord"></div>
-                            <img src="src/assets/Group 2.png" alt="" />
+                            <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=1A1A1A" alt="" />
                         </div>
                         <button className="btn-month-ord">
                             <span>Oktober</span>
-                            <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                            <img src="https://img.icons8.com/?size=100&id=39786&format=png&color=FFFFFF" alt="" />
                         </button>
                         <button className="btn-year-ord">
                             <span>2024</span>
-                            <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                            <img src="https://img.icons8.com/?size=100&id=39786&format=png&color=FFFFFF" alt="" />
                         </button>
                 </div>
         </div>
         <div className="cards-ord">
             <div className="card-done-ord">
-                <img src="src/assets/IC SELESAI.svg" alt="" />
+                <img src="https://img.icons8.com/?size=100&id=59850&format=png&color=FFFFFF" alt="" />
                 <h2>6</h2>
                 <p>Pesanan Selesai</p>
             </div>
             <div className="card-pending-ord">
-                <img src="src/assets/alarm.png" alt="" />
+                <img src="https://img.icons8.com/?size=100&id=10083&format=png&color=FFFFFF" alt="" />
                 <h2>2</h2>
                 <p>Pending</p>
             </div>

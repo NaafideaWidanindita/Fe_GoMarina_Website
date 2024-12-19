@@ -43,26 +43,20 @@ const handleDetailClick = (order) => {
                         <div className="searchbar">
                             <div className="text-search">Cari</div>
                             <div className="line-search"></div>
-                            <img src="src/assets/Group 2.png" alt="Search Icon" />
+                            <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=1A1A1A" alt="Search Icon" />
                         </div>
-                        <button className="btn-add">
-                            <img src="src/assets/material-symbols_add-2-rounded (1).svg" alt="Tambah" />
-                        </button>
-                        <button className="btn-delete">
-                            <img src="src/assets/material-symbols_delete.svg" alt="Hapus" />
-                        </button>
                     </div>
         </div>
         <div className="overview">
           <h1>Apa yang perlu di cek hari ini?</h1>
           <div className="cards-dash">
             <div className="card-confirmed-dash">
-                <img src="src/assets/IC SELESAI.svg" alt="" />
+                <img src="https://img.icons8.com/?size=100&id=59850&format=png&color=FFFFFF" alt="" />
                 <h2>2</h2>
                 <p>Pesanan Hari ini</p>
             </div>
             <div className="card-pending-dash">
-                <img src="src/assets/alarm.png" alt="" />
+                <img src="https://img.icons8.com/?size=100&id=10083&format=png&color=FFFFFF" alt="" />
                 <h2>2</h2>
                 <p>Pending</p>
             </div>

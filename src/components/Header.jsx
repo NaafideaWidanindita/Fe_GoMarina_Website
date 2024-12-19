@@ -27,8 +27,8 @@ const Header = () => {
                         />
                     </div>
                     <div className="icon-btn-wrapper">
-                        <div className="icon" style={{ marginTop: "-0.6rem" }}>
-                            <img src="src/assets/Group (1).svg" alt="Icon" />
+                        <div className="icon" style={{ marginTop: "-0.6rem", width: '6px', height: '6px' }}>
+                            <img src="https://img.icons8.com/?size=100&id=83193&format=png&color=1A1A1A" alt="Icon" />
                         </div>
                         <button className="btn-logout" onClick={openLogout}>
                             Log Out

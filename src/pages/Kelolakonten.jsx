@@ -78,7 +78,7 @@ const Kelolakonten = () => {
                         <div className="searchbar">
                             <div className="text-search">Cari</div>
                             <div className="line-search"></div>
-                            <img src="src/assets/Group 2.png" alt="Search Icon" />
+                            <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=1A1A1A" alt="Search Icon" />
                         </div>
                         {/* <button className="btn-add" onMouseEnter={showPopup} onMouseLeave={hidePopup}>
                             <img src="src/assets/material-symbols_add-2-rounded (1).svg" alt="Tambah" />
@@ -123,7 +123,7 @@ const Kelolakonten = () => {
                             <div className="image">
                                 <h2 className="img-text">Foto Baru</h2>
                                 <div className="upload-box" onClick={handleFileUploadClick}>
-                                    <img src="src/assets/Up Arrow.png" alt="Upload Icon" />
+                                    <img src="https://img.icons8.com/?size=100&id=367&format=png&color=FFFFFF" alt="Upload Icon" />
                                     <p>Unggah foto baru</p>
                                 </div>
                                 <input
@@ -196,7 +196,7 @@ const Kelolakonten = () => {
                             <div className="image">
                                 <h2 className="img-text">Foto Baru</h2>
                                 <div className="upload-box" onClick={handleFileUploadClick}>
-                                    <img src="src/assets/Up Arrow.png" alt="Upload Icon" />
+                                    <img src="https://img.icons8.com/?size=100&id=367&format=png&color=FFFFFF" alt="Upload Icon" />
                                     <p>Unggah foto baru</p>
                                 </div>
                                 <input

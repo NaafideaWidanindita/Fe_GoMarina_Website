@@ -12,7 +12,7 @@ const Product = () => {
             stok: "100 kg",
             rating: 5,
             deskripsi: "Nikmati kesegaran jambu merah yang kaya akan vitamin C dan antioksidan. Cocok untuk dikonsumsi langsung atau dijadikan bahan jus dan salad.",
-            imgSrc: "src/assets/Closeup na goiaba vermelha fatiada com folhas verdes na mesa de madeira rústica _ Foto Premium.jfif"
+            imgSrc: "https://youngontop.com/wp-content/uploads/2024/09/Closeup-na-goiaba-vermelha-fatiada-com-folhas-verdes-na-mesa-de-madeira-rustica-_-Foto-Premium.jpeg"
         },
         {
             id: '2',
@@ -21,7 +21,7 @@ const Product = () => {
             stok: "100 botol",
             rating: 5,
             deskripsi: "Segelas jus jambu merah yang segar dan menyehatkan, tanpa gula tambahan. Rasakan manfaat kesehatan dalam setiap tegukan!",
-            imgSrc: "src/assets/Aprenda a fazer lassi de goiaba, bebida típica indiana.jfif"
+            imgSrc: "https://akcdn.detik.net.id/visual/2021/11/24/ilustrasi-jus-jambu-biji_169.jpeg?w=650&q=80"
         },
         {
             id: '3',
@@ -31,7 +31,7 @@ const Product = () => {
             deskripsi: "Selai jambu merah yang manis dan lezat, ideal untuk olesan roti atau pelengkap kue. Dibuat dari buah jambu merah segar, memberikan rasa alami yang kaya dan tekstur yang lembut. Tambahkan ke dalam sarapan Anda untuk sentuhan manis yang sempurna!",
             stok: "100 jar",
             rating: 5,
-            imgSrc: "src/assets/9 Best Red and Pink Guava Varieties.jfif"
+            imgSrc: "https://youngontop.com/wp-content/uploads/2024/08/9-Best-Red-and-Pink-Guava-Varieties.jpeg"
         },
         {
             nama: "Keripik Jambu Merah",
@@ -40,7 +40,7 @@ const Product = () => {
             deskripsi: "Keripik jambu merah yang renyah dan gurih, camilan sehat yang cocok untuk segala suasana. Dibuat dari irisan jambu merah segar yang dikeringkan dengan sempurna, memberikan rasa yang unik dan memuaskan. Nikmati sebagai camilan sehari-hari atau oleh-oleh khas!",
             stok: "100 pack",
             rating: 5,
-            imgSrc: "src/assets/keripik jambu.jpg"
+            imgSrc: "https://assets.kompasiana.com/items/album/2021/04/12/057649800-1546585179-resep-keripik-ubi-ungu-kriuk-6074164a8ede4824ff4545a2.jpg?t=o&v=770"
         },
         {
             nama: "Paket Hampers Jambu",
@@ -49,7 +49,7 @@ const Product = () => {
             deskripsi: "Paket hampers eksklusif yang berisi buah jambu merah segar, jus jambu merah, <span> </span>selai jambu merah, dan keripik jambu merah. Hadiah sempurna untuk orang terkasih atau sebagai bingkisan spesial. Berikan kelezatan dan manfaat kesehatan dalam satu paket istimewa!",
             stok: "100 paket",
             rating: 5,
-            imgSrc: "src/assets/keranjang.jpg"
+            imgSrc: "https://i.pinimg.com/736x/38/f9/32/38f9322c9f4374eecff2b55aee51c9e9.jpg"
         },
     ];
 
@@ -72,8 +72,14 @@ const Product = () => {
                     <div className="searchbar-prod">
                         <div className="text-search-prod">Cari</div>
                         <div className="line-search-prod"></div>
-                        <img src="src/assets/Group 2.png" alt="" />
+                        <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=1A1A1A" alt="" />
                     </div>
+                    <button className="btn-add">
+                            <img src="https://img.icons8.com/?size=100&id=62888&format=png&color=FFFFFF" alt="Tambah" />
+                        </button>
+                        <button className="btn-delete">
+                            <img src="https://img.icons8.com/?size=100&id=67884&format=png&color=FFFFFF" alt="Hapus" />
+                    </button>
                 </div>
             </div>
 

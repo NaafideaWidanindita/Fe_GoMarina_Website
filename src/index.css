@@ -58,6 +58,8 @@ body {
 }
 
 .icon img {
+    width: 40px;
+    height: 40px;
     margin-left: 44rem;
     margin-top: -6.6rem;
     margin-bottom: 10rem;
@@ -82,7 +84,7 @@ body {
     line-height: 20px;
     letter-spacing: 0.4px;
     margin-left: 50rem;
-    margin-top: -13.3rem;
+    margin-top: -7rem;
 }
 
 .btn-logout:hover {
@@ -767,14 +769,14 @@ tbody tr td:last-child, thead tr th:last-child {
 }
 
 .btn-month-ord img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 
 .btn-year-ord img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 
@@ -1114,7 +1116,7 @@ tbody tr td:last-child, thead tr th:last-child {
     border: 2px solid #fff;
     border-radius: 15px;
     margin-right: 42px;
-    margin-top: -48px;
+    margin-top: -36px;
     cursor: pointer;
 }
 
@@ -1157,7 +1159,7 @@ tbody tr td:last-child, thead tr th:last-child {
     border: 2px solid #fff;
     border-radius: 15px;
     margin-left: -50px;
-    margin-top: -48px;
+    margin-top: -36px;
     cursor: pointer;
 }
 
@@ -2288,14 +2290,14 @@ tbody tr td:last-child, thead tr th:last-child {
 }
 
 .btn-month-sales img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 
 .btn-year-sales img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 
@@ -2346,6 +2348,11 @@ h2, p {
     margin-left: 32rem;
     margin-top: -4.6rem;
     cursor: pointer;
+}
+
+.print-button img {
+    width: 20px;
+    height: 20px;
 }
 
 table {
@@ -2549,14 +2556,14 @@ tbody tr td:last-child, thead tr th:last-child {
 }
 
 .btn-month-pym img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 
 .btn-year-pym img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 

@@ -99,11 +99,11 @@ const Kelolapembayaran = () => {
                     <div className="searchbar-pym">
                         <div className="text-search-pym">Cari</div>
                         <div className="line-search-pym"></div>
-                        <img src="src/assets/Group 2.png" alt="" />
+                        <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=1A1A1A" alt="" />
                     </div>
                     <button className="btn-month-pym" onClick={openMonth} ref={monthButtonRef}>
                         <span>Oktober</span>
-                        <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                        <img src="https://img.icons8.com/?size=100&id=39786&format=png&color=FFFFFF" alt="" />
                     </button>
                     {showMonthPopup && (
                         <div className="popup-month-overlay" onClick={closeMonth}>
@@ -133,7 +133,7 @@ const Kelolapembayaran = () => {
                     )}
                     <button className="btn-year-pym" onClick={openYear} ref={yearButtonRef}>
                         <span>2024</span>
-                        <img src="src/assets/material-symbols_keyboard-arrow-down (1).png" alt="" />
+                        <img src="https://img.icons8.com/?size=100&id=39786&format=png&color=FFFFFF" alt="" />
                     </button>
                     {showYearPopup && (
                         <div className="popup-year-overlay" onClick={closeYear}>
@@ -165,12 +165,12 @@ const Kelolapembayaran = () => {
             </div>
             <div className="cards-pym">
                 <div className="card-confirmed-pym">
-                    <img src="src/assets/IC SELESAI.svg" alt="" />
+                    <img src="https://img.icons8.com/?size=100&id=59850&format=png&color=FFFFFF" alt="" />
                     <h2>{approvedCount}</h2>
                     <p>Approved</p>
                 </div>
                 <div className="card-pending-pym">
-                    <img src="src/assets/alarm.png" alt="" />
+                    <img src="https://img.icons8.com/?size=100&id=10083&format=png&color=FFFFFF" alt="" />
                     <h2>{pendingCount}</h2>
                     <p>Pending</p>
                 </div>
